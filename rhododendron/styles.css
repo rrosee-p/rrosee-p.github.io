@@ -39,6 +39,9 @@ header {
     width: calc(100vw-2em);
 }
 
+
+/* PUT THE REST OF THE MOBILE BASELINE LAYOUT HERE */
+
 @media screen and (orientation: landscape) {
 
     #rhodiePicture {
@@ -56,4 +59,6 @@ header {
         width: 45vw;
     }
     
+    /* REST OF THE DESKTOP LAYOUT HERE */
+
 }
