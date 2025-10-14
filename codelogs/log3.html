@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!-- meta tags and title -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Color</title>
+
+	<!-- external and internal CSS -->
+	<link rel="stylesheet" href="styles.css" media="all">
+	<style>
+		/* in-file CSS here */
+	</style>
+
+</head>
+<body>
+
+    <h1>CSS Color</h1>
+
+    <hr>
+
+    <h2>What do these CSS properties do?</h2>
+        <h3>Color</h3>
+
+            <ul>
+                <li>Sets the text color (foreground color) of an element.</li>
+            </ul>
+
+        <p>Applies to:</p>
+
+            <ul>
+                <li>Text inside the element (including inline text, headings, paragraphs, links, etc.)</li>
+            </ul>
+
+        <h3>Background-Color</h3>
+
+            <ul>
+                <li>Sets the background color of an element.</li>
+            </ul>
+
+        <p>Applies to:</p>
+
+            <ul>
+                <li>The entire background area of the element, including padding (but not margin).</li>
+            </ul>
+
+        <h3>Border-Color</h3>
+
+            <ul>
+                <li>Sets the color of the element's border.</li>
+                <li>A border must be defined using the proper functions, or it won't appear. Setting border-color alone does nothing unless a border is visible.</li>
+            </ul>
+
+    <hr>
+
+    <h2>How does CSS accept color as a value?</h2>
+        <h3>Named Colors:</h3>
+            <p>CSS includes over 140 named colors that can be used directly</p>
+                <ul>
+                    <li>color: red;</li>
+                    <li>background-color: lightgreen;</li>
+                </ul>
+            <p>Examples:
+                <ul>
+                    <li>Red</li>
+                    <li>Blue</li>
+                    <li>Goldenrod</li>
+                    <li>mediumslateblue</li>
+                </ul>
+        <h3>Hexadecimal Colors</h3>
+            <p>Hex values start with # followed by 3 or 6 hexadecimal digits representing red, green, and blue (RR, GG, BB).</p>
+                <ul>
+                    <li>#FF5733 (a reddish-orange)</li>
+                    <li>#00FF00 (green)</li>
+                    <li>#333 (shorthand for #333333 — dark gray)</li>
+                </ul>
+        <h3>RGB (Red, Green, Blue)</h3>
+            <p>Defines a color using red, green, and blue values from 0 to 255.</p>
+                <ul>
+                    <li>rgb(255, 255, 0) → yellow</li>
+                    <li>rgb(0, 0, 0) → black</li>
+                    <li>rgb(255, 255, 255) → white</li>
+                </ul>
+        <h3>HSL (Hue, Saturation, Lightness)</h3>
+            <p>More intuitive for designers — you define colors using hue (0–360°), saturation, and lightness (percentages).</p>
+                <ul>
+                    <li>hsl(0, 100%, 50%) → red</li>
+                    <li>hsl(120, 100%, 25%) → dark green</li>
+                    <li>hsl(60, 100%, 50%) → yellow</li>
+                </ul>
+                
+    <hr>
+</body>
+</html>
