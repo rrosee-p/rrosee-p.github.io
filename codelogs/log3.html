@@ -1,69 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Images</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 40px;
-      background-color: #fdfdfd;
+      padding: 20px;
+      background-color: #ffffff;
       color: #333;
     }
 
-    h1 {
+    h1, h2 {
       color: #2c3e50;
     }
 
-    h2 {
-      color: #34495e;
-      margin-top: 2rem;
+    img {
+      max-width: 100%;
+      height: auto;
     }
 
-    code {
-      background: #f1f1f1;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-size: 0.95em;
+    .box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 15px 0;
+      background-color: #f9f9f9;
     }
 
-    .example {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      padding: 1rem;
-      margin-top: 1rem;
-      border-radius: 5px;
-    }
-
-    .bg-example {
+    .background-box {
       height: 200px;
-      background-image: url('https://via.placeholder.com/800x200');
+      background-image: url('https://via.placeholder.com/600x200');
       background-size: cover;
       background-position: center;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 1rem;
-    }
-
-    th, td {
-      border: 1px solid #ccc;
-      padding: 0.75rem;
-      text-align: left;
-    }
-
-    th {
-      background-color: #f0f0f0;
     }
   </style>
 </head>
@@ -71,110 +42,65 @@
 
   <h1>Images</h1>
 
-  <p>Images are an essential part of web design and can be included in web pages using both HTML and CSS. Below, we explore the differences between these methods, important CSS properties, and general image concepts.</p>
+  <p>Images can be added to websites using HTML or CSS. Here's how they work and what makes them different:</p>
 
-  <h2>Using Images in HTML</h2>
+  <h2>Using &lt;img&gt; in HTML</h2>
 
-  <p>You can use the <code>&lt;img&gt;</code> tag to embed images directly into your HTML content:</p>
+  <p>You use the <code>&lt;img&gt;</code> tag to show an image directly on the page.</p>
 
-  <div class="example">
-    <code>&lt;img src="image.jpg" alt="A description of the image"&gt;</code><br><br>
-    <img src="https://via.placeholder.com/400x200" alt="Sample image" style="max-width:100%; border-radius:5px; margin-top:10px;">
+  <div class="box">
+    <code>&lt;img src="image.jpg" alt="Description of image"&gt;</code><br><br>
+    <img src="https://via.placeholder.com/400x200" alt="Example Image">
   </div>
 
-  <h2>Using Background Images in CSS</h2>
+  <h2>Using background-image in CSS</h2>
 
-  <p>You can apply background images to HTML elements using CSS, like this:</p>
+  <p>You can also set an image as the background of a box or section using CSS.</p>
 
-  <div class="example">
-    <code>background-image: url('image.jpg');<br>
-    background-size: cover;<br>
-    background-position: center;</code>
+  <div class="box">
+    <code>
+      .background-box {<br>
+      &nbsp;&nbsp;background-image: url('image.jpg');<br>
+      &nbsp;&nbsp;background-size: cover;<br>
+      &nbsp;&nbsp;background-position: center;<br>
+      }
+    </code>
   </div>
 
-  <div class="bg-example">
+  <div class="background-box">
     Background Image Example
   </div>
 
-  <h2>HTML <code>&lt;img&gt;</code> vs CSS <code>background-image</code></h2>
+  <h2>What’s the Difference?</h2>
 
-  <table>
-    <tr>
-      <th>Feature</th>
-      <th>&lt;img&gt; Tag</th>
-      <th>background-image (CSS)</th>
-    </tr>
-    <tr>
-      <td>Purpose</td>
-      <td>Displays content-related images</td>
-      <td>Used for decorative or layout-based images</td>
-    </tr>
-    <tr>
-      <td>Code Location</td>
-      <td>HTML</td>
-      <td>CSS</td>
-    </tr>
-    <tr>
-      <td>Layout Behavior</td>
-      <td>Occupies space in layout</td>
-      <td>Does not affect layout directly</td>
-    </tr>
-    <tr>
-      <td>Accessibility</td>
-      <td>Supports <code>alt</code> text</td>
-      <td>Ignored by screen readers</td>
-    </tr>
-    <tr>
-      <td>SEO</td>
-      <td>Indexed by search engines</td>
-      <td>Not indexed</td>
-    </tr>
-  </table>
-
-  <h2>Other Useful CSS Properties for Background Images</h2>
   <ul>
-    <li><strong>background-size:</strong> Controls how the background image is scaled. Common values: <code>cover</code>, <code>contain</code>.</li>
-    <li><strong>background-position:</strong> Determines where the background image is placed inside the element. E.g., <code>center</code>, <code>top right</code>.</li>
-    <li><strong>background-repeat:</strong> Controls whether the image repeats. Common values: <code>no-repeat</code>, <code>repeat-x</code>, <code>repeat-y</code>.</li>
+    <li><strong>&lt;img&gt;:</strong> Used for important images (like photos, logos).</li>
+    <li><strong>background-image:</strong> Used for decoration (like a banner or section background).</li>
+    <li><strong>&lt;img&gt;</strong> can be seen by screen readers. <code>background-image</code> cannot.</li>
+    <li><strong>&lt;img&gt;</strong> is part of the page content. <code>background-image</code> is only style.</li>
   </ul>
 
-  <h2>Bitmap Image Dimensions vs. Resolution</h2>
-  <p><strong>Dimensions</strong> refer to the width and height of an image in pixels, while <strong>resolution</strong> refers to the pixel density (e.g., DPI), affecting print quality but not display size on screens.</p>
+  <h2>Other Useful CSS for Background Images</h2>
 
-  <h2>Extra Credit: Image Formats — GIF, PNG, JPG, WebP, SVG</h2>
+  <ul>
+    <li><code>background-size:</code> Makes the image fit. Use <code>cover</code> or <code>contain</code>.</li>
+    <li><code>background-position:</code> Moves the image (like <code>center</code>, <code>top right</code>).</li>
+    <li><code>background-repeat:</code> Lets the image repeat or not (<code>no-repeat</code>).</li>
+  </ul>
 
-  <table>
-    <tr>
-      <th>Format</th>
-      <th>Key Features</th>
-      <th>Best Use</th>
-    </tr>
-    <tr>
-      <td><strong>GIF</strong></td>
-      <td>Supports simple animation, limited to 256 colors</td>
-      <td>Animated icons, simple graphics</td>
-    </tr>
-    <tr>
-      <td><strong>PNG</strong></td>
-      <td>Lossless compression, supports transparency</td>
-      <td>Logos, images needing sharp edges or transparency</td>
-    </tr>
-    <tr>
-      <td><strong>JPG / JPEG</strong></td>
-      <td>Lossy compression, small file size, no transparency</td>
-      <td>Photographs and complex images</td>
-    </tr>
-    <tr>
-      <td><strong>WebP</strong></td>
-      <td>Modern format, supports both lossy/lossless, smaller size</td>
-      <td>Web-optimized images with good quality</td>
-    </tr>
-    <tr>
-      <td><strong>SVG</strong></td>
-      <td>Vector format, infinitely scalable, editable with code</td>
-      <td>Icons, logos, and illustrations</td>
-    </tr>
-  </table>
+  <h2>Dimensions vs Resolution</h2>
+
+  <p><strong>Dimensions</strong> = width and height in pixels. <strong>Resolution</strong> = how clear the image looks, especially when printed.</p>
+
+  <h2>Extra Credit: Image Formats</h2>
+
+  <ul>
+    <li><strong>GIF:</strong> Small files, supports animation. Good for simple graphics.</li>
+    <li><strong>PNG:</strong> Clear images with transparency. Great for logos and icons.</li>
+    <li><strong>JPG:</strong> Small size, great for photos. Doesn’t support transparency.</li>
+    <li><strong>WebP:</strong> Newer format, small and high quality. Good for web use.</li>
+    <li><strong>SVG:</strong> Vector format. Stays sharp at any size. Best for icons and logos.</li>
+  </ul>
 
 </body>
 </html>
