@@ -12,70 +12,38 @@
 	<style>
 		/* in-file CSS here */
 	</style>
+
 </head>
 <body>
 
-  <h1>Images</h1>
+	<div class="question">
+		<h2>1. How can images be used in HTML and CSS?</h2>
+	</div>
 
-  <p>Images can be added to websites using HTML or CSS. Here's how they work and what makes them different:</p>
+	<div class="question">
+		<h2>2. What are the differences between presenting an image using an HTML tag (like &lt;img&gt;) and presenting it as the background of an HTML element (using the CSS property <code>background-image</code>)?</h2>
+		<p>Think in terms of differences in code as well as differences in functionality and layout.</p>
+	</div>
 
-  <h2>Using &lt;img&gt; in HTML</h2>
+	<div class="question">
+		<h2>3. Besides <code>background-image</code>, what other CSS properties affect the display of background images?</h2>
+		<p>Describe at least two more CSS properties.</p>
+	</div>
 
-  <p>You use the <code>&lt;img&gt;</code> tag to show an image directly on the page.</p>
+	<div class="question">
+		<h2>4. In one sentence, how would you define the differences between dimensions and resolution in a bitmap image?</h2>
+	</div>
 
-  <div class="box">
-    <code>&lt;img src="image.jpg" alt="Description of image"&gt;</code><br><br>
-    <img src="https://via.placeholder.com/400x200" alt="Example Image">
-  </div>
-
-  <h2>Using background-image in CSS</h2>
-
-  <p>You can also set an image as the background of a box or section using CSS.</p>
-
-  <div class="box">
-    <code>
-      .background-box {<br>
-      &nbsp;&nbsp;background-image: url('image.jpg');<br>
-      &nbsp;&nbsp;background-size: cover;<br>
-      &nbsp;&nbsp;background-position: center;<br>
-      }
-    </code>
-  </div>
-
-  <div class="background-box">
-    Background Image Example
-  </div>
-
-  <h2>What’s the Difference?</h2>
-
-  <ul>
-    <li><strong>&lt;img&gt;:</strong> Used for important images (like photos, logos).</li>
-    <li><strong>background-image:</strong> Used for decoration (like a banner or section background).</li>
-    <li><strong>&lt;img&gt;</strong> can be seen by screen readers. <code>background-image</code> cannot.</li>
-    <li><strong>&lt;img&gt;</strong> is part of the page content. <code>background-image</code> is only style.</li>
-  </ul>
-
-  <h2>Other Useful CSS for Background Images</h2>
-
-  <ul>
-    <li><code>background-size:</code> Makes the image fit. Use <code>cover</code> or <code>contain</code>.</li>
-    <li><code>background-position:</code> Moves the image (like <code>center</code>, <code>top right</code>).</li>
-    <li><code>background-repeat:</code> Lets the image repeat or not (<code>no-repeat</code>).</li>
-  </ul>
-
-  <h2>Dimensions vs Resolution</h2>
-
-  <p><strong>Dimensions</strong> = width and height in pixels. <strong>Resolution</strong> = how clear the image looks, especially when printed.</p>
-
-  <h2>Extra Credit: Image Formats</h2>
-
-  <ul>
-    <li><strong>GIF:</strong> Small files, supports animation. Good for simple graphics.</li>
-    <li><strong>PNG:</strong> Clear images with transparency. Great for logos and icons.</li>
-    <li><strong>JPG:</strong> Small size, great for photos. Doesn’t support transparency.</li>
-    <li><strong>WebP:</strong> Newer format, small and high quality. Good for web use.</li>
-    <li><strong>SVG:</strong> Vector format. Stays sharp at any size. Best for icons and logos.</li>
-  </ul>
+	<div class="question">
+		<h2>What are the similarities and differences between these image file formats? Why are some better than others for specific uses?</h2>
+		<ul>
+			<li>GIF</li>
+			<li>PNG</li>
+			<li>JPG/JPEG</li>
+			<li>WebP</li>
+			<li>SVG</li>
+		</ul>
+	</div>
 
 </body>
 </html>
