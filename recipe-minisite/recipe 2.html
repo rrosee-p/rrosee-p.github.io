@@ -1,132 +1,88 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-    <!-- meta tags and title -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spanish Rice</title>
-
-    <!-- external and internal CSS -->
-    <link rel="stylesheet" href="styles.css" media="all">
-    <style>
-        /* base (mobile) styles */
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: 300px;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .recipe-container {
-            display: flex;
-            flex-direction: coloumn;
-            /* mobile = stacked vertically*/
-            justify-content: space-between;
-            /*spacing between the two coloumns*/
-            gap: 40px;
-            padding: 20px;
-
-        }
-
-        .ingredients,
-        .directions {
-            width: 100%;
-        }
-
-        /*desktop / landscape tablet view*/
-        @media (min-width: 768px) {
-            recipe-container {
-                flex-direction: row;
-                /*put ingredients and directions side-by-side*/
-                justify-content: space-between;
-                align-items: flex-start;
-                gap: 40px;
-            }
-
-            .ingredients,
-            .directions {
-                flex: 1;
-                min-width: 300px;
-            }
-        }
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>French Toast Recipe</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Spanish Rice</h1>
-        <img src="jay-nlper-XciY4hwqnNk-unsplash.jpg">
-        <p>A delicious and easy to make recipe. Use washed rice for a better taste!</p>
-    </header>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">My Recipes</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button class="dropdown-btn">My Recipes ▾</button>
+          <ul class="dropdown-menu">
+            <li><a href="recipe1.html">Spaghetti Carbonara</a></li>
+            <li><a href="recipe2.html">French Toast</a></li>
+            <li><a href="recipe3.html">Matcha Cheesecake</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <button class="dropdown-btn">Favorite Recipe Sites ▾</button>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.allrecipes.com/" target="_blank">AllRecipes</a></li>
+            <li><a href="https://www.seriouseats.com/" target="_blank">Serious Eats</a></li>
+            <li><a href="https://www.bonappetit.com/" target="_blank">Bon Appétit</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <main>
-        <div class="recipe-container">
-            <div class="ingredients">
-                <h2>Ingredients</h2>
-            <ul>
-                <li>Spanish Rice Ingredients
-                    <ul>
-                        <li>2 cups of washed rice</li>
-                        <li>3 cups of water</li>
-                        <li>Tomato Paste</li>
-                    </ul>
-                </li>
-                <li>Seasonings
-                    <ul>
-                        <li>Onion Seasoning</li>
-                        <li>Garlic Seasoning</li>
-                        <li>Salt & Pepper Seasoning</li>
-                        <li>Chicken Poullion Seasoning</li>
-                    </ul>
-                </li>
-            </div>
+  <!-- RECIPE CONTENT -->
+  <main class="recipe-page">
+    <h1>Classic French Toast</h1>
+    <p class="intro">
+      Start your morning right with golden, buttery French toast — crisp on the edges, soft in the center, and dusted with a touch of cinnamon and powdered sugar. Perfect for a cozy breakfast or brunch!
+    </p>
 
-            <div class="directions">
-                <h2>Directions</h2>
-                        <li>Preheat pan to a medium heat</li>
-                        <li>Add oil and let it heat up</li>
-                        <li>Add rice and stir until golden brown</li>
-                        <li>Then add tomato paste</li>
-                        <li>Mix around for 2 minutes then add 3 cups of water</li>
-                        <li>Mix again and add 2 tablespoons of all seasonings</li>
-                        <li>Mix until fully dispursed throughout rice</li>
-                        <li>Turn down the heat and put top cover over pan and let sit for 30 minutes</li>
-                        <li>After 30 minutes turn off heat and let sit for 15 minutes</li>
-            </ol>
-            </div>
-        </div>
+    <img src="images/french-toast.jpg" alt="Classic French Toast" class="recipe-image">
 
-        
+    <section>
+      <h2>Ingredients</h2>
+      <ul>
+        <li>4 large eggs</li>
+        <li>2/3 cup milk</li>
+        <li>1 tsp vanilla extract</li>
+        <li>1 tsp cinnamon</li>
+        <li>8 slices of thick bread (brioche or challah recommended)</li>
+        <li>Butter, for frying</li>
+        <li>Powdered sugar and maple syrup, for serving</li>
+      </ul>
+    </section>
 
-    </main>
-    <footer>
-        <p>© Rose Pineda. Photo by <a
-                href="https://unsplash.com/@itworkonline">Jay
-                NLper</a> on <a
-                href="https://unsplash.com/photos/white-ceramic-plate-with-rice-and-stainless-steel-fork-XciY4hwqnNk">Unsplash</a>
-        </p>
-    </footer>
+    <section>
+      <h2>Instructions</h2>
+      <ol>
+        <li>In a shallow bowl, whisk together eggs, milk, vanilla, and cinnamon until well combined.</li>
+        <li>Heat a large skillet or griddle over medium heat and add a pat of butter.</li>
+        <li>Dip each slice of bread into the egg mixture, coating both sides evenly.</li>
+        <li>Place the soaked bread onto the skillet and cook until golden brown on each side, about 2–3 minutes per side.</li>
+        <li>Serve warm with butter, powdered sugar, and maple syrup.</li>
+      </ol>
+    </section>
 
+    <section>
+      <h2>Tips</h2>
+      <p>
+        For the best results, use slightly stale bread — it soaks up the custard mixture without getting soggy.
+        Add a pinch of nutmeg for extra warmth, or top with fresh berries for a fruity twist!
+      </p>
+    </section>
 
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </main>
+
+  <footer>
+    <p>© 2025 My Recipe Minisite</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
-
 </html>
