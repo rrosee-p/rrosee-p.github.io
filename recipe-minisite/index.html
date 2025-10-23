@@ -1,61 +1,61 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
 
-    <!-- meta tags and title -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+	<!-- meta tags and title -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Menu Demo</title>
 
-    <!-- external and internal CSS -->
-    <link rel="stylesheet" href="styles.css" media="all">
-    <style>
-        /* in-file CSS here */
-    </style>
+	<!-- external and internal CSS -->
+	<link rel="stylesheet" href="styles.css" media="all">
 
-    <!-- external and internal JavaScript -->
-    <script src="scripts.js" defer></script>
-    <script>
-        // in-page JavaScript here
-    </script>
+	<!-- external and internal JavaScript -->
+	<!-- file renamed to "scripts.js" (plural) after the demo -->
+	<script src="scripts.js" defer></script>
 
 </head>
 
-<body class="home">
-    <nav id="mainNav">
-        <a id="navBurger">&#9776;</a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
+<body>
 
-            <li><a href="#">My Recipes</a>
-                <ul>
-                    <li><a href="recipe1.html">Spanish Rice</a></li>
-                    <li><a href="recipe2.html">Cucumber Salad</a></li>
-                    <li><a href="recipe3.html">Peanut Butter Cookies</a></li>
-                </ul>
-            </li>
+	<nav>
+		<a id="navBurger">&#9776;</a>
 
-            <li><a href="#">Favorite Recipe Sites</a>
-                <ul>
-                    <li><a href="https://store.177milkstreet.com/?msclkid=e2cbf47523bc1c6d49c49c8c5bce729c&utm_cid=605413306&utm_group=All%20Products&utm_placement=&utm_source=bing&utm_medium=cpc&utm_campaign=PMAX%20%7C%20All%20Products&utm_term=store.177milkstreet.com&utm_content=All%20Products" target="_blank">Milk Street Store</a></li>
-                    <li><a href="https://www.tasteofhome.com/" target="_blank">Taste of Home</a></li>
-                    <li><a href="https://www.delish.com/cooking/menus/g1478/quick-dinner-ideas/?utm_source=bing&utm_medium=cpc&utm_campaign=mgu_bg_del_d_bm_prog_org_us_g1478&msclkid=26157c5cbe1419709b1814a5c666a14b" target="_blank">Delish</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+		<ul>
+			<li><a href="#">My Favorite News Sites</a>
+				<ul>
+					<li><a href="https://arstechnica.com">Ars Technica</a></li>
+					<li><a href="#">Submenu One B</a></li>
+					<li><a href="#">Submenu One C</a></li>
+				</ul>
+			</li>
 
-    <script>
-        const navBurger = document.getElementById('navBurger');
-        const nav = document.getElementById('mainNav');
+			<li><a href="#">Menu Item Two</a>
+				<ul>
+					<li><a href="#">Submenu Two A</a></li>
+					<li><a href="#">Submenu Two B</a></li>
+					<li><a href="#">Submenu Two C</a></li>
+					<li><a href="#">Submenu Two D</a></li>
+					<li><a href="#">Submenu Two E</a></li>
+				</ul>
+			</li>
 
-        navBurger.addEventListener('click', () => {
-            nav.classList.toggle('show-menu');
-        });
-    </script>
+			<li><a href="#">Menu Item Three</a>
+				<ul>
+					<li><a href="#">Submenu Three A</a></li>
+					<li><a href="#">Submenu Three B</a></li>
+				</ul>
+			</li>
 
+		</ul>
+
+	</nav>
+
+	<main>
+		<h1>Some content goes here</h1>
+		<p>Eventually this will be something useful.</p>
+	</main>
 
 </body>
 
