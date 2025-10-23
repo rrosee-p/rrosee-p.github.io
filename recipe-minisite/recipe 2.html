@@ -1,37 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spaghetti Carbonara</title>
-  <link rel="stylesheet" href="styles.css" />
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Toast</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* base (mobile) styles */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 300px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .recipe-container {
+            display: flex;
+            flex-direction: coloumn;
+            /* mobile = stacked vertically*/
+            justify-content: space-between;
+            /*spacing between the two coloumns*/
+            gap: 40px;
+            padding: 20px;
+
+        }
+
+        .ingredients,
+        .directions {
+            width: 100%;
+        }
+
+        /*desktop / landscape tablet view*/
+        @media (min-width: 768px) {
+            recipe-container {
+                flex-direction: row;
+                /*put ingredients and directions side-by-side*/
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .ingredients,
+            .directions {
+                flex: 1;
+                min-width: 300px;
+            }
+        }
+    </style>
+
 </head>
+
 <body>
-  <nav> ... (same as index.html nav) ... </nav>
 
-  <main class="recipe-page">
-    <h1>Spaghetti Carbonara</h1>
-    <img src="images/carbonara.jpg" alt="Spaghetti Carbonara" class="recipe-img" />
+    <header>
+        <h1>French Toast</h1>
+        <img src="jay-nlper-XciY4hwqnNk-unsplash.jpg">
+        <p>A delicious and easy to make recipe!</p>
+    </header>
 
-    <h2>Ingredients</h2>
-    <ul>
-      <li>8 oz spaghetti</li>
-      <li>2 eggs</li>
-      <li>½ cup grated Parmesan</li>
-      <li>4 oz pancetta</li>
-      <li>Salt & pepper</li>
-    </ul>
+    <main>
+        <div class="recipe-container">
+            <div class="ingredients">
+                <h2>Ingredients</h2>
+            <ul>
+                <li>Spanish Rice Ingredients
+                    <ul>
+                        <li>6 slices of white bread (or whichever bread you prefer)</li>
+                        <li>2 eggs</li>
+                        <li>1 cup of whole milk</li>
+                        <li>1/2 tsp nutmeg</li>
+                        <li>1/4 tsp cinnamon</li>
+                        <li>3 tbsp butter</li>
+                        <li>Whipped Cream</li>
+                        <li>Sliced Strawberries</li>
+                        <li>Maple Syrup</li>
+                    </ul>
+                </li>
+            </div>
 
-    <h2>Instructions</h2>
-    <ol>
-      <li>Cook pasta until al dente.</li>
-      <li>Fry pancetta until crisp.</li>
-      <li>Whisk eggs and Parmesan together.</li>
-      <li>Combine everything off-heat and season.</li>
-    </ol>
-  </main>
+            <div class="directions">
+                <h2>Directions</h2>
+                        <li>In a bowl, whisk together eggs, milk, nutmeg and cinnamon.</li>
+                        <li>Coat each slice of prferred bread evenly in egg mixture.</li>
+                        <li>Bring a skillet to medium heat and add 1 tbsp butter.</li>
+                        <li>Add 2 slices of bread and cook for 2-3 minutes per side, until golden brown. Repeat for remaining slices.</li>
+                        <li>Add 3 slices to each plate and top with sliced strawberries, a dallop of whipped cream and a sprinkle of powdered sugar.</li>
+                        <li>Serve with maple syrup</li>
+                        <li>And enjoy!</li>
+            </ol>
+            </div>
+        </div>
 
-  <footer><p>© 2025 My Recipe Minisite</p></footer>
-  <script src="scripts.js"></script>
+        
+
+    </main>
+    <footer>
+        <p>© Rose Pineda. Photo by <a
+                href="https://unsplash.com/@itworkonline">Jay
+                NLper</a> on <a
+                href="https://unsplash.com/photos/white-ceramic-plate-with-rice-and-stainless-steel-fork-XciY4hwqnNk">Unsplash</a>
+        </p>
+    </footer>
+
+
 </body>
+
 </html>

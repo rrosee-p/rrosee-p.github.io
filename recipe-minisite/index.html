@@ -1,73 +1,62 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Recipe Minisite</title>
-  <link rel="stylesheet" href="styles.css" />
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* in-file CSS here */
+    </style>
+
+    <!-- external and internal JavaScript -->
+    <script src="scripts.js" defer></script>
+    <script>
+        // in-page JavaScript here
+    </script>
+
 </head>
-<body>
-  <nav>
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">My Recipe Minisite</a>
-      <button class="nav-toggle">☰</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <button class="dropbtn">My Recipes ▾</button>
-          <ul class="dropdown-content">
-            <li><a href="recipe1.html">Spaghetti Carbonara</a></li>
-            <li><a href="recipe2.html">French Toast</a></li>
-            <li><a href="recipe3.html">Matcha Cheesecake</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <button class="dropbtn">Favorite Recipe Sites ▾</button>
-          <ul class="dropdown-content">
-            <li><a href="https://www.allrecipes.com/" target="_blank">AllRecipes</a></li>
-            <li><a href="https://www.seriouseats.com/" target="_blank">Serious Eats</a></li>
-            <li><a href="https://www.bonappetit.com/" target="_blank">Bon Appétit</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
-  <header class="hero">
-    <img src="images/hero.jpg" alt="Cooking Ingredients">
-    <div class="hero-text">
-      <h1>Welcome to My Recipe Minisite</h1>
-      <p>Explore delicious recipes and cooking inspiration!</p>
-    </div>
-  </header>
+<body class="home">
+    <nav id="mainNav">
+        <a id="navBurger">&#9776;</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
 
-  <main class="home-recipes">
-    <section class="recipe-card">
-      <a href="recipe1.html">
-        <img src="images/recipe1-thumb.jpg" alt="Spaghetti Carbonara" />
-        <h2>Spaghetti Carbonara</h2>
-      </a>
-    </section>
+            <li><a href="#">My Recipes</a>
+                <ul>
+                    <li><a href="recipe1.html">Spanish Rice</a></li>
+                    <li><a href="recipe2.html">Cucumber Salad</a></li>
+                    <li><a href="recipe3.html">Peanut Butter Cookies</a></li>
+                </ul>
+            </li>
 
-    <section class="recipe-card">
-      <a href="recipe2.html">
-        <img src="images/recipe2-thumb.jpg" alt="French Toast" />
-        <h2>French Toast</h2>
-      </a>
-    </section>
+            <li><a href="#">Favorite Recipe Sites</a>
+                <ul>
+                    <li><a href="https://store.177milkstreet.com/?msclkid=e2cbf47523bc1c6d49c49c8c5bce729c&utm_cid=605413306&utm_group=All%20Products&utm_placement=&utm_source=bing&utm_medium=cpc&utm_campaign=PMAX%20%7C%20All%20Products&utm_term=store.177milkstreet.com&utm_content=All%20Products" target="_blank">Milk Street Store</a></li>
+                    <li><a href="https://www.tasteofhome.com/" target="_blank">Taste of Home</a></li>
+                    <li><a href="https://www.delish.com/cooking/menus/g1478/quick-dinner-ideas/?utm_source=bing&utm_medium=cpc&utm_campaign=mgu_bg_del_d_bm_prog_org_us_g1478&msclkid=26157c5cbe1419709b1814a5c666a14b" target="_blank">Delish</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-    <section class="recipe-card">
-      <a href="recipe3.html">
-        <img src="images/recipe3-thumb.jpg" alt="Matcha Cheesecake" />
-        <h2>Matcha Cheesecake</h2>
-      </a>
-    </section>
-  </main>
+    <script>
+        const navBurger = document.getElementById('navBurger');
+        const nav = document.getElementById('mainNav');
 
-  <footer>
-    <p>© 2025 My Recipe Minisite</p>
-  </footer>
+        navBurger.addEventListener('click', () => {
+            nav.classList.toggle('show-menu');
+        });
+    </script>
 
-  <script src="scripts.js"></script>
+
 </body>
+
 </html>
