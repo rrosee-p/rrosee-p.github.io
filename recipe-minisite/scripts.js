@@ -1,16 +1,7 @@
-// Mobile nav toggle
+// Mobile navigation toggle
 const toggle = document.querySelector('.nav-toggle');
-const menu = document.querySelector('.nav-menu');
+const navLinks = document.querySelector('.nav-links');
 
 toggle.addEventListener('click', () => {
-  menu.classList.toggle('open');
-});
-
-// Optional: close dropdowns when clicking outside
-window.addEventListener('click', e => {
-  if (!e.target.closest('.dropdown')) {
-    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-      menu.style.display = '';
-    });
-  }
+  navLinks.classList.toggle('active');
 });
