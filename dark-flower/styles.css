@@ -1,63 +1,43 @@
-/*mobile-first design for Pacific Rhododendron layout */
-
-*{
-    box-sizing: border-box
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
+    /* use border-box model on everything */
 }
 
-body {
-    padding: 0;
-    margin: 0;
+#demo {
+    display: flex;
+    flex-direction: row;
+    /* or column, row-reverse, column-reverse */
+    flex-wrap: wrap;
 }
 
-header {
-    width: 100vw;
-    height: 100vh;
+#demo h1 {
+    flex-basis: 100%;
+    order: -1;
 }
 
-#rhodiePicture {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("Pacific\ Rhododendron\ 1\ -\ Walter\ Siegmund.jpeg");
-    background-size: cover;
-    background-position: center center;
+#demo p {
+    flex-basis: 20%;
+    padding-right: 1em;
+    margin-top: 0;
 }
 
-#rhodieTitle {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;  
+#para1 {
+    order: 0;
 }
 
-#rhodieTitle h1{
-    position: absolute;
-    bottom: 0;
-    left: 1em;
+#para2 {
+    order: 0;
+}
+
+#toggleDarkMode {
+    margin-top: 2em;
+}
+
+body.darkMode {
+    background-color: darkgrey;
     color: white;
-    font-size: 2.5em;
-    width: calc(100vw-2em);
 }
 
-
-/* PUT THE REST OF THE MOBILE BASELINE LAYOUT HERE */
-
-@media screen and (orientation: landscape) {
-
-    #rhodiePicture {
-        width: 50vw;
-    }
-
-    #rhodieTitle {
-        width: 50vw;
-        left: 50vw;
-        background-color: #333;
-    }
-
-    #rhodieTitle h1 {
-        width: 45vw;
-    }
-    
-    /* REST OF THE DESKTOP LAYOUT HERE */
-
+body.darkMode h1 {
+    color: red;
 }
