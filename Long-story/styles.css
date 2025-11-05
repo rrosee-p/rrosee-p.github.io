@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Each step fills full viewport */
+/* Each step fills the viewport */
 .step {
   height: 100vh;
   display: flex;
@@ -53,7 +52,7 @@ p {
 
 /* Background images for each step */
 .step1 { background-image: url("https://images.unsplash.com/photo-1503265192943-9d7eea6fc3f9"); }
-.step2 { background-image: url("https://images.unsplash.com/photo-1476725994107-2d43ec0d9d7b"); }
-.step3 { background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6"); }
-.step4 { background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e"); }
+.step2 { background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6"); }
+.step3 { background-image: url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe"); }
+.step4 { background-image: url("https://images.unsplash.com/photo-1529257414772-196b8de9d989"); }
 .step5 { background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"); }
