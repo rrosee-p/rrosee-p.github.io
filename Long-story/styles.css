@@ -12,20 +12,20 @@ body {
   overflow-x: hidden;
 }
 
-/* Each "step" fills the entire screen */
+/* Each "step" fills the entire screen and uses ONE background image */
 .step {
-  height: 100vh; /* full-screen */
+  height: 100vh; /* full screen */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://images.unsplash.com/photo-1503265192943-9d7eea6fc3f9?auto=format&fit=crop&w=1470&q=80");
-  background-size: cover; /* make it cover the screen */
+  background-image: url("https://images.unsplash.com/photo-1503265192943-9d7eea6fc3f9?auto=format&fit=crop&w=1470&q=80"); /* single background image */
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* optional: gives parallax effect */
+  background-attachment: fixed; /* parallax effect */
   position: relative;
 }
 
-/* Overlay for text */
+/* Overlay text box */
 .overlay {
   background-color: rgba(0, 0, 0, 0.45); /* semi-transparent black */
   padding: 30px;
