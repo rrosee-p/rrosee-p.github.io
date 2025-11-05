@@ -1,4 +1,4 @@
-/* Reset and body */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +7,10 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
-/* Each step full screen */
+/* Full-screen steps */
 .step {
     width: 100vw;
     height: 100vh;
@@ -21,17 +21,23 @@ body {
     text-align: center;
     color: white;
     padding: 2rem;
-    transition: all 0.5s ease;
 }
 
-/* Step backgrounds (use images or gradients) */
-.step1 { background: url('images/forest_intro.jpg') center/cover no-repeat; }
-.step2 { background: url('images/map.jpg') center/cover no-repeat; }
-.step3 { background: url('images/journey.jpg') center/cover no-repeat; }
-.step4 { background: url('images/challenge.jpg') center/cover no-repeat; }
-.step5 { background: url('images/treasure.jpg') center/cover no-repeat; }
+/* Background images for each step (replace with your own images) */
+.step1 { background: url('images/intro.jpg') center/cover no-repeat; }
+.step2 { background: url('images/hare_boast.jpg') center/cover no-repeat; }
+.step3 { background: url('images/race_start.jpg') center/cover no-repeat; }
+.step4 { background: url('images/hare_sleep.jpg') center/cover no-repeat; }
+.step5 { background: url('images/tortoise_win.jpg') center/cover no-repeat; }
 
-/* Text shadow for readability */
+/* Text readability */
 .step h1, .step h2, .step p {
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Optional: responsive text */
+@media (max-width: 768px) {
+    .step h1 { font-size: 2rem; }
+    .step h2 { font-size: 1.5rem; }
+    .step p { font-size: 1rem; }
 }
