@@ -1,84 +1,98 @@
-/* Empire State Building Vertical Scroll -- Basic */
-
-/* load fonts Limelight and Titillium Web from Google Fonts */
+/* Load Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Titillium+Web:wght@300&display=swap');
 
-
 * {
-    box-sizing: border-box; /* set box-sizing to make dimensions primary */
+    box-sizing: border-box;
 }
 
 html, body {
 	padding: 0;
 	margin: 0;
 	font-family: "Titillium Web", sans-serif;
+    color: #fff;
 }
 
-/* eliminate default padding from content elements */
+/* Remove default spacing */
 h1, h2, p {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
-/* five sections of 100vh == 500vh with a tall background photo of the building */
+/* MAIN CONTAINER: 6 sections = 600vh */
 main {
-    height: 500vh;
-    background-image: url("rihab-kaci-Wh90iPJa59g-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
+    height: 600vh;
+    width: 100vw;
 }
 
-/* all sections are positioned relative and have a full-page height of 100vh */
+/* All sections fill one screen */
 section {
     position: relative;
     height: 100vh;
-    border-bottom: dashed 1px #fff5; /* comment in to see faint division lines between sections */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
 }
 
-/* content divs within the sections are positioned absolutely to the top and right, almost half the page wide */
-section > .content {
+/* Content Box */
+section .content {
+    max-width: 800px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+/* Scroll instructions on first screen */
+.instructions {
     position: absolute;
-    width: 42vw;
-    top: 20vh;
-    right: 4vw;
-}
-
-/* paragraph tags are given a size and padding */
-section > .content > p {
-    font-size: 2rem;
-    padding: 1rem;
-}
-
-/* position the "scroll down" instructions at the bottom of the screen, aligned with .content */
-section > .instructions {
-    position: absolute;
-    bottom: 2vh;
-    width: 42vw;
-    right: 4vw;
-    text-decoration: none;
+    bottom: 30px;
     text-transform: uppercase;
     font-size: 1rem;
-    color: #000;
-    padding-left: 1rem; /* to align with paragraphs */
+    opacity: 0.8;
 }
 
-/* transform the header and paragraph text in the title block */
-#section1 p,
-#section1 h1 {
-    text-transform: uppercase;
+/* SECTION BACKGROUNDS */
+
+/* Section 1 - title page */
+#section1 {
+    background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=65") no-repeat center center;
+    background-size: cover;
 }
 
-/* set font, size, and spacing on the h1 tag */
 #section1 h1 {
-    font-size: 7rem;
-    line-height: 6rem;
     font-family: Limelight, serif;
-    margin-left: -0.4rem; /* due to the size and design of the font, bump it left a tiny bit for visual alignment */
-    padding-left: 1rem; /* to align with paragraphs */
+    font-size: 5rem;
+    letter-spacing: 2px;
 }
 
-/* change the color in the last section due to the background image */
-#section5 p {
-    background-color: #cfddebbb;
+/* Each section gets a mood color */
+#section2 {
+    background-color: #d64545; /* bright beginning */
+}
+
+#section3 {
+    background-color: #9e2a2a; /* wolf appears */
+}
+
+#section4 {
+    background-color: #3c2f2f; /* inside house */
+}
+
+#section5 {
+    background-color: #1e2b3a; /* danger scene */
+}
+
+#section6 {
+    background-color: #3b7a4c; /* resolution - calm forest green */
+}
+
+/* Responsive-ish text size for smaller screens (optional, not full responsive) */
+@media (max-width: 700px) {
+  .content {
+    font-size: 1.3rem;
+  }
+  #section1 h1 {
+    font-size: 3rem;
+  }
 }
