@@ -1,65 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little Red Riding Hood - Long Story</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Long Story</title>
+    <link rel="stylesheet" href="styles.css">
 
-  <!-- Animate.css for animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-  <!-- Link to your styles -->
-  <link rel="stylesheet" href="styles.css">
+    <!-- Animate.css + Wow.js (for extra credit animation) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 </head>
 <body>
+    <script>
+        new WOW().init(); // Initialize Wow.js
+    </script>
 
-  <!-- STEP 1: Title -->
-  <section class="step wow animate__animated animate__fadeIn">
-    <div class="overlay">
-      <h1>Little Red Riding Hood</h1>
-      <p>A story of a young girl, a wolf, and an important lesson.</p>
-      <p class="scroll-hint">Scroll ↓</p>
-    </div>
-  </section>
+    <!-- Step 1: Intro -->
+    <section class="step step1 wow fadeIn">
+        <h1>Once Upon a Time...</h1>
+        <p>Welcome to the story of Lila, a curious adventurer exploring an enchanted forest.</p>
+    </section>
 
-  <!-- STEP 2: The Journey -->
-  <section class="step wow animate__animated animate__fadeInUp">
-    <div class="overlay">
-      <h2>The Journey</h2>
-      <p>Little Red Riding Hood walks through the forest carrying a basket for her grandmother.</p>
-    </div>
-  </section>
+    <!-- Step 2 -->
+    <section class="step step2 wow fadeInUp">
+        <h2>The Mysterious Map</h2>
+        <p>Lila finds a glowing map tucked inside an old tree. It shows a hidden treasure deep in the forest.</p>
+    </section>
 
-  <!-- STEP 3: Wolf Appears -->
-  <section class="step wow animate__animated animate__fadeInUp">
-    <div class="overlay">
-      <h2>The Wolf Appears</h2>
-      <p>A sly wolf meets her on the path and asks where she is going.</p>
-    </div>
-  </section>
+    <!-- Step 3 -->
+    <section class="step step3 wow fadeInLeft">
+        <h2>The Journey Begins</h2>
+        <p>She follows the map through sparkling rivers and dark caves, meeting magical creatures along the way.</p>
+    </section>
 
-  <!-- STEP 4: Danger at Grandmother’s House -->
-  <section class="step wow animate__animated animate__fadeInUp">
-    <div class="overlay">
-      <h2>Grandmother in Danger</h2>
-      <p>The wolf reaches the house before her, tricks Grandmother, and waits in disguise for Little Red Riding Hood.</p>
-    </div>
-  </section>
+    <!-- Step 4 -->
+    <section class="step step4 wow fadeInRight">
+        <h2>The Final Challenge</h2>
+        <p>Lila encounters a puzzle guarding the treasure. With wit and courage, she solves it and unlocks the chest.</p>
+    </section>
 
-  <!-- STEP 5: Rescue -->
-  <section class="step wow animate__animated animate__fadeInUp">
-    <div class="overlay">
-      <h2>Rescue</h2>
-      <p>A passing woodcutter hears the commotion and saves Little Red Riding Hood and her grandmother.</p>
-      <p class="credit">Story by: Traditional Fairy Tale</p>
-    </div>
-  </section>
-
-  <!-- Include WOW.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.3/wow.min.js"></script>
-  <script>
-    new WOW({ mobile: true, live: false }).init();
-  </script>
+    <!-- Step 5: Ending -->
+    <section class="step step5 wow fadeInUp">
+        <h2>The Treasure</h2>
+        <p>The chest is filled with golden knowledge and stories. Lila’s adventure is complete, but her curiosity never ends.</p>
+    </section>
 
 </body>
 </html>

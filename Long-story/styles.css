@@ -1,59 +1,37 @@
-/* Reset default margin and padding */
+/* Reset and body */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Body styles */
 body {
-  font-family: Arial, sans-serif;
-  color: white;
-  overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Each step is full screen with ONE fixed background image */
+/* Each step full screen */
 .step {
-  height: 100vh; /* full screen */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1470&q=80");
-  background-size: cover; /* make it cover the screen */
-  background-position: center;
-  background-attachment: fixed; /* makes the background stay while scrolling */
-  position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    transition: all 0.5s ease;
 }
 
-/* Overlay text box */
-.overlay {
-  background-color: rgba(0,0,0,0.45);
-  padding: 30px;
-  max-width: 700px;
-  text-align: center;
-  border-radius: 6px;
-}
+/* Step backgrounds (use images or gradients) */
+.step1 { background: url('images/forest_intro.jpg') center/cover no-repeat; }
+.step2 { background: url('images/map.jpg') center/cover no-repeat; }
+.step3 { background: url('images/journey.jpg') center/cover no-repeat; }
+.step4 { background: url('images/challenge.jpg') center/cover no-repeat; }
+.step5 { background: url('images/treasure.jpg') center/cover no-repeat; }
 
-/* Headings */
-h1, h2 {
-  margin-bottom: 20px;
-}
-
-/* Paragraph text */
-p {
-  line-height: 1.6;
-}
-
-/* Scroll hint */
-.scroll-hint {
-  margin-top: 15px;
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-/* Credit text at the end */
-.credit {
-  margin-top: 25px;
-  font-size: 14px;
-  opacity: 0.8;
+/* Text shadow for readability */
+.step h1, .step h2, .step p {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
