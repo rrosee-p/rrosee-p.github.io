@@ -1,0 +1,43 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Georgia", serif;
+  color: #fff;
+  background: #111;
+  overflow-x: hidden;
+}
+
+.story { width: 100%; }
+
+/* Shared Step Style */
+.step {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.45);
+  padding: 2.5rem;
+  max-width: 750px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Step Images (Change if you want) */
+.step-1 { background-image: url("https://images.unsplash.com/photo-1503265192943-9d7eea6fc3f9"); }
+.step-2 { background-image: url("https://images.unsplash.com/photo-1476725994107-2d43ec0d9d7b"); }
+.step-3 { background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6"); }
+.step-4 { background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e"); }
+.step-5 { background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"); }
+
+h1, h2 { margin-bottom: 1rem; }
+p { line-height: 1.55; }
+
+.sub { margin-bottom: 1rem; font-size: 1.2rem; }
+.prompt { opacity: 0.85; margin-top: 1rem; }
+.credits { margin-top: 2rem; font-size: 0.85rem; opacity: 0.8; }
