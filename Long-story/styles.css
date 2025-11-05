@@ -1,62 +1,60 @@
-/* Make each section full screen */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Font + default styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   color: white;
 }
 
-/* Each step takes the full height of the screen */
-.step {
+/* Each panel takes full screen */
+.panel {
   height: 100vh;
-  padding: 40px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
 }
 
-/* Backgrounds for each step */
-.step:nth-child(1) {
-  background: url("https://images.unsplash.com/photo-1503265192943-9d7eea6fc3f9") center/cover no-repeat;
-}
-
-.step:nth-child(2) {
-  background: url("https://images.unsplash.com/photo-1476725994107-2d43ec0d9d7b") center/cover no-repeat;
-}
-
-.step:nth-child(3) {
-  background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover no-repeat;
-}
-
-.step:nth-child(4) {
-  background: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e") center/cover no-repeat;
-}
-
-.step:nth-child(5) {
-  background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover no-repeat;
+/* Text box similar to your classmate's */
+.text-box {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 30px;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 6px;
 }
 
 h1, h2 {
   margin-bottom: 15px;
+  font-weight: 600;
 }
 
 p {
-  max-width: 700px;
   line-height: 1.5;
 }
 
-.scroll-hint {
-  margin-top: 20px;
+.hint {
+  margin-top: 10px;
   font-size: 14px;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .credit {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 14px;
-  opacity: 0.8;
+  opacity: 0.75;
 }
+
+/* Background images (you can swap these later) */
+#panel1 { background-image: url("https://images.unsplash.com/photo-1503265192943-9d7eea6fc3f9"); }
+#panel2 { background-image: url("https://images.unsplash.com/photo-1476725994107-2d43ec0d9d7b"); }
+#panel3 { background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6"); }
+#panel4 { background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e"); }
+#panel5 { background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"); }
