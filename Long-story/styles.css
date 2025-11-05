@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("rihab-kaci-Wh90iPJa59g-unsplash.jpg");
+  background-image: url("https://images.unsplash.com/photo-1503265192943-9d7eea6fc3f9?auto=format&fit=crop&w=1470&q=80");
   background-size: cover; /* make it cover the screen */
   background-position: center;
   background-attachment: fixed; /* optional: gives parallax effect */
