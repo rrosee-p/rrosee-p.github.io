@@ -23,7 +23,7 @@ h1, h2, p {
 /* five sections of 100vh == 500vh with a tall background photo of the building */
 main {
     height: 500vh;
-    background-image: url("../images/empire-state-building.jpg");
+    background-image: url("rihab-kaci-Wh90iPJa59g-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
