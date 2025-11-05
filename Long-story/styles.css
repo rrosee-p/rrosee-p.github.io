@@ -1,4 +1,4 @@
-/* Reset default margins/padding */
+/* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
@@ -12,22 +12,22 @@ body {
   overflow-x: hidden;
 }
 
-/* Each "step" fills the entire screen and uses ONE background image */
+/* Each step is full screen with ONE fixed background image */
 .step {
   height: 100vh; /* full screen */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://unsplash.com/photos/a-woman-in-a-red-cape-standing-in-the-woods-Wh90iPJa59g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"); /* single background image */
-  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1470&q=80");
+  background-size: cover; /* make it cover the screen */
   background-position: center;
-  background-attachment: fixed; /* parallax effect */
+  background-attachment: fixed; /* makes the background stay while scrolling */
   position: relative;
 }
 
 /* Overlay text box */
 .overlay {
-  background-color: rgba(0, 0, 0, 0.45); /* semi-transparent black */
+  background-color: rgba(0,0,0,0.45);
   padding: 30px;
   max-width: 700px;
   text-align: center;
