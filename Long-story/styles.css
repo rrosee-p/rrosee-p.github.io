@@ -56,7 +56,7 @@ section .content {
 
 /* Section 1 - title page */
 #section1 {
-    background: url("belinda-fewings-mwEwys0CWog-unsplash.jpg") no-repeat center center;
+    background: url("belinda-fewings-mwEwys0CWog-unsplash.jpg");
     background-size: cover;
 }
 
