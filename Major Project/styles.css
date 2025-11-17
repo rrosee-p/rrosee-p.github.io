@@ -1,0 +1,66 @@
+/* Neutral + Light Pink Photography Site Styles */
+
+/* Base */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  background-color: #f6f2f4; /* soft pinkish-neutral */
+  color: #3a3a3a;
+}
+
+header {
+  background-color: #e8d7dd; /* muted light pink */
+  color: #3c2f33;
+  padding: 25px;
+  text-align: center;
+  border-bottom: 3px solid #d3bec6;
+}
+
+/* Navigation */
+nav {
+  background-color: #f0e7ea; /* very soft neutral pink */
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  color: #5a4b4f;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #c28ea4; /* dusty pink */
+}
+
+/* Layout */
+section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Slideshow */
+.slideshow img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 3px solid #f3e6eb;
+}
+
+/* Footer */
+footer {
+  background-color: #e8d7dd;
+  color: #3c2f33;
+  padding: 25px;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 3px solid #d3bec6;
+}
