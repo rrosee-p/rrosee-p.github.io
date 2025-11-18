@@ -1,6 +1,5 @@
 /* Neutral + Light Pink Theme */
 
-/* Base Page Setup */
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -8,9 +7,9 @@ body {
   color: #3a3a3a;
 }
 
-/* HERO SECTION (PARTIAL BACKGROUND IMAGE) */
+/* HERO SECTION (only on home page) */
 .hero {
-  background-image: url("IMG_7779 (2).JPG"); /* replace with your photo */
+  background-image: url("IMG_7779 (2).JPG");
   background-size: cover;
   background-position: center;
   height: 350px;
@@ -21,22 +20,11 @@ body {
 }
 
 .hero-text {
-  background: rgba(255, 240, 245, 0.7); /* soft pink translucent box */
+  background: rgba(255, 240, 245, 0.75);
   padding: 20px 40px;
   border-radius: 12px;
   text-align: center;
   border: 2px solid #d3bec6;
-}
-
-.hero-text h1 {
-  margin: 0;
-  color: #3c2f33;
-}
-
-.hero-text p {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  color: #5a4b4f;
 }
 
 /* NAVIGATION */
