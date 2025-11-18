@@ -1,7 +1,7 @@
 /* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
+    font-family: "Comic Sans MS", "Poppins", Arial, sans-serif;
+    background: #ffeef4; /* soft pink background */
     margin: 0;
     padding: 30px;
     line-height: 1.7;
@@ -13,31 +13,49 @@ body {
     max-width: 900px;
     margin: 0 auto;
     background: #ffffff;
-    padding: 25px 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    border-radius: 20px; /* extra rounded for kid-friendly feel */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: 4px solid #000000; /* playful border */
 }
 
 /* Titles */
-h1, h2 {
-    color: #b45578; /* soft pink accent */
-    margin-bottom: 10px;
+h1 {
+    color: #000000; 
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    background: #000000;
+    padding: 10px 0;
+    border-radius: 15px;
+}
+
+h2 {
+    color: #000000;
+    margin-top: 25px;
+    font-size: 1.6rem;
 }
 
 h3 {
-    color: #444;
+    color: #000000;
     margin-top: 20px;
 }
 
 /* Link Styling */
 a {
-    color: #b45578;
-    text-decoration: none;
+    color: #000000;
     font-weight: bold;
+    text-decoration: none;
+    background: #ffe1eb;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: 0.2s;
 }
 
 a:hover {
-    text-decoration: underline;
+    background: #000000;
+    color: #fff;
 }
 
 /* Lists */
@@ -46,7 +64,22 @@ ul {
     margin-bottom: 20px;
 }
 
-/* Paragraph Spacing */
+ul li::marker {
+    color: #000000; /* cute pink bullet points */
+    font-size: 1.2em;
+}
+
+/* Paragraphs */
 p {
     margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+/* Add fun section separators */
+hr {
+    border: none;
+    height: 3px;
+    background: #000000;
+    border-radius: 10px;
+    margin: 25px 0;
 }
