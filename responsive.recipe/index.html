@@ -5,83 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spanish Rice Recipe</title>
 
-    <!-- external stylesheet -->
+    <!-- External stylesheet -->
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* ---------- Base Styles (Mobile First) ---------- */
-
-        body {
-            margin: 0;
-            font-family: Verdana, sans-serif;
-            background: #faf7f2;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        img.hero {
-            display: block;
-            width: 100%;
-            max-width: 450px;
-            margin: 10px auto 20px;
-            border-radius: 10px;
-        }
-
-        header p {
-            text-align: center;
-            font-style: italic;
-            color: #444;
-        }
-
-        .recipe-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .ingredients, 
-        .steps {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            text-align: center;
-            margin-top: 0;
-        }
-
-        /* ---------- Larger Screens ---------- */
-        @media (min-width: 750px) {
-            .recipe-wrapper {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-
-            .ingredients,
-            .steps {
-                flex: 1;
-                min-width: 320px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Spanish Rice</h1>
-        <img class="hero" src="jay-nlper-XciY4hwqnNk-unsplash.jpg" alt="Spanish rice photo">
-        <p>A flavorful, simple Spanish rice recipe your whole family will love.</p>
+    <!-- ===== HEADER BANNER ===== -->
+    <header class="hero-header">
+        <div class="overlay">
+            <h1>Spanish Rice</h1>
+            <p>A flavorful, simple Spanish rice recipe your whole family will love.</p>
+        </div>
     </header>
 
+    <!-- ===== MAIN CONTENT ===== -->
     <main>
         <section class="recipe-wrapper">
 
@@ -118,11 +56,13 @@
                     <li>Turn off heat and let rest for 15 minutes before serving.</li>
                 </ol>
             </div>
+
         </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <p style="text-align:center; margin-top:30px;">
+        <p>
             © Rose Pineda. Photo by 
             <a href="https://unsplash.com/@itworkonline">Jay NLper</a>
             on 
