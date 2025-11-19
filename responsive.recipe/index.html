@@ -1,133 +1,136 @@
-
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spanish Rice</title>
+    <title>Spanish Rice Recipe</title>
 
-    <!-- external and internal CSS -->
-    <link rel="stylesheet" href="styles.css" media="all">
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
     <style>
-        /* base (mobile) styles */
+        /* ---------- Base Styles (Mobile First) ---------- */
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Verdana, sans-serif;
+            background: #faf7f2;
             padding: 20px;
+            line-height: 1.6;
         }
 
         h1 {
             text-align: center;
+            margin-bottom: 10px;
         }
 
-        img {
+        img.hero {
             display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: 300px;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .recipe-container {
-            display: flex;
-            flex-direction: coloumn;
-            /* mobile = stacked vertically*/
-            justify-content: space-between;
-            /*spacing between the two coloumns*/
-            gap: 40px;
-            padding: 20px;
-
-        }
-
-        .ingredients,
-        .directions {
             width: 100%;
+            max-width: 450px;
+            margin: 10px auto 20px;
+            border-radius: 10px;
         }
 
-        /*desktop / landscape tablet view*/
-        @media (min-width: 768px) {
-            recipe-container {
+        header p {
+            text-align: center;
+            font-style: italic;
+            color: #444;
+        }
+
+        .recipe-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .ingredients, 
+        .steps {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        /* ---------- Larger Screens ---------- */
+        @media (min-width: 750px) {
+            .recipe-wrapper {
                 flex-direction: row;
-                /*put ingredients and directions side-by-side*/
-                justify-content: space-between;
                 align-items: flex-start;
-                gap: 40px;
             }
 
             .ingredients,
-            .directions {
+            .steps {
                 flex: 1;
-                min-width: 300px;
+                min-width: 320px;
             }
         }
     </style>
-
 </head>
 
 <body>
 
     <header>
         <h1>Spanish Rice</h1>
-        <img src="jay-nlper-XciY4hwqnNk-unsplash.jpg">
-        <p>A delicious and easy to make recipe. Use washed rice for a better taste!</p>
+        <img class="hero" src="jay-nlper-XciY4hwqnNk-unsplash.jpg" alt="Spanish rice photo">
+        <p>A flavorful, simple Spanish rice recipe your whole family will love.</p>
     </header>
 
     <main>
-        <div class="recipe-container">
+        <section class="recipe-wrapper">
+
+            <!-- Ingredients Box -->
             <div class="ingredients">
                 <h2>Ingredients</h2>
-            <ul>
-                <li>Spanish Rice Ingredients
-                    <ul>
-                        <li>2 cups of washed rice</li>
-                        <li>3 cups of water</li>
-                        <li>Tomato Paste</li>
-                    </ul>
-                </li>
-                <li>Seasonings
-                    <ul>
-                        <li>Onion Seasoning</li>
-                        <li>Garlic Seasoning</li>
-                        <li>Salt & Pepper Seasoning</li>
-                        <li>Chicken Poullion Seasoning</li>
-                    </ul>
-                </li>
+                <ul>
+                    <li>2 cups washed rice</li>
+                    <li>3 cups water</li>
+                    <li>3 tbsp tomato paste</li>
+                    <li>Oil (for browning rice)</li>
+                    <li>Seasonings:
+                        <ul>
+                            <li>Onion powder</li>
+                            <li>Garlic powder</li>
+                            <li>Salt & pepper</li>
+                            <li>Chicken bouillon powder</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
 
-            <div class="directions">
+            <!-- Directions Box -->
+            <div class="steps">
                 <h2>Directions</h2>
-                        <li>Preheat pan to a medium heat</li>
-                        <li>Add oil and let it heat up</li>
-                        <li>Add rice and stir until golden brown</li>
-                        <li>Then add tomato paste</li>
-                        <li>Mix around for 2 minutes then add 3 cups of water</li>
-                        <li>Mix again and add 2 tablespoons of all seasonings</li>
-                        <li>Mix until fully dispursed throughout rice</li>
-                        <li>Turn down the heat and put top cover over pan and let sit for 30 minutes</li>
-                        <li>After 30 minutes turn off heat and let sit for 15 minutes</li>
-            </ol>
+                <ol>
+                    <li>Heat a pan over medium heat.</li>
+                    <li>Add oil and allow it to warm up.</li>
+                    <li>Add rice and stir until lightly browned.</li>
+                    <li>Mix in tomato paste until well combined.</li>
+                    <li>Pour in 3 cups of water.</li>
+                    <li>Stir in 2 tablespoons of each seasoning.</li>
+                    <li>Cover and cook on low heat for 30 minutes.</li>
+                    <li>Turn off heat and let rest for 15 minutes before serving.</li>
+                </ol>
             </div>
-        </div>
-
-        
-
+        </section>
     </main>
+
     <footer>
-        <p>© Rose Pineda. Photo by <a
-                href="https://unsplash.com/@itworkonline">Jay
-                NLper</a> on <a
-                href="https://unsplash.com/photos/white-ceramic-plate-with-rice-and-stainless-steel-fork-XciY4hwqnNk">Unsplash</a>
+        <p style="text-align:center; margin-top:30px;">
+            © Rose Pineda. Photo by 
+            <a href="https://unsplash.com/@itworkonline">Jay NLper</a>
+            on 
+            <a href="https://unsplash.com/photos/white-ceramic-plate-with-rice-and-stainless-steel-fork-XciY4hwqnNk">
+                Unsplash
+            </a>
         </p>
     </footer>
 
-
 </body>
-
 </html>
