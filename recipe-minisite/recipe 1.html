@@ -2,131 +2,70 @@
 <html>
 
 <head>
-
-    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spanish Rice</title>
 
-    <!-- external and internal CSS -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css" media="all">
-    <style>
-        /* base (mobile) styles */
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: 300px;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .recipe-container {
-            display: flex;
-            flex-direction: coloumn;
-            /* mobile = stacked vertically*/
-            justify-content: space-between;
-            /*spacing between the two coloumns*/
-            gap: 40px;
-            padding: 20px;
-
-        }
-
-        .ingredients,
-        .directions {
-            width: 100%;
-        }
-
-        /*desktop / landscape tablet view*/
-        @media (min-width: 768px) {
-            recipe-container {
-                flex-direction: row;
-                /*put ingredients and directions side-by-side*/
-                justify-content: space-between;
-                align-items: flex-start;
-                gap: 40px;
-            }
-
-            .ingredients,
-            .directions {
-                flex: 1;
-                min-width: 300px;
-            }
-        }
-    </style>
-
 </head>
 
 <body>
 
-    <header>
-        <h1>Spanish Rice</h1>
-        <img src="jay-nlper-XciY4hwqnNk-unsplash (2).jpg">
-       
-        <p>A delicious and easy to make recipe. Use washed rice for a better taste!</p>
+    <!-- HEADER WITH BACKGROUND IMAGE -->
+    <header class="hero-banner">
+        <div class="overlay">
+            <h1>Spanish Rice</h1>
+            <p>A delicious and easy-to-make recipe. Use washed rice for a better taste!</p>
+        </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
         <div class="recipe-container">
-            <div class="ingredients">
+
+            <div class="ingredients box">
                 <h2>Ingredients</h2>
-            <ul>
-                <li>Spanish Rice Ingredients
-                    <ul>
-                        <li>2 cups of washed rice</li>
-                        <li>3 cups of water</li>
-                        <li>Tomato Paste</li>
-                    </ul>
-                </li>
-                <li>Seasonings
-                    <ul>
-                        <li>Onion Seasoning</li>
-                        <li>Garlic Seasoning</li>
-                        <li>Salt & Pepper Seasoning</li>
-                        <li>Chicken Poullion Seasoning</li>
-                    </ul>
-                </li>
+                <ul>
+                    <li>2 cups of washed rice</li>
+                    <li>3 cups of water</li>
+                    <li>Tomato paste</li>
+                </ul>
+
+                <h3>Seasonings</h3>
+                <ul>
+                    <li>Onion seasoning</li>
+                    <li>Garlic seasoning</li>
+                    <li>Salt & Pepper</li>
+                    <li>Chicken bouillon</li>
+                </ul>
             </div>
 
-            <div class="directions">
+            <div class="directions box">
                 <h2>Directions</h2>
-                        <li>Preheat pan to a medium heat</li>
-                        <li>Add oil and let it heat up</li>
-                        <li>Add rice and stir until golden brown</li>
-                        <li>Then add tomato paste</li>
-                        <li>Mix around for 2 minutes then add 3 cups of water</li>
-                        <li>Mix again and add 2 tablespoons of all seasonings</li>
-                        <li>Mix until fully dispursed throughout rice</li>
-                        <li>Turn down the heat and put top cover over pan and let sit for 30 minutes</li>
-                        <li>After 30 minutes turn off heat and let sit for 15 minutes</li>
-            </ol>
+                <ol>
+                    <li>Preheat pan to medium heat.</li>
+                    <li>Add oil and let it heat up.</li>
+                    <li>Add rice and stir until golden brown.</li>
+                    <li>Add tomato paste.</li>
+                    <li>Mix for 2 minutes, then add 3 cups of water.</li>
+                    <li>Add 2 tablespoons of each seasoning.</li>
+                    <li>Stir until well combined.</li>
+                    <li>Reduce heat, cover pan, and cook for 30 minutes.</li>
+                    <li>Turn off heat and let sit for 15 minutes.</li>
+                </ol>
             </div>
+
         </div>
-
-        
-
     </main>
+
+    <!-- FOOTER -->
     <footer>
-        <p>© Rose Pineda. Photo by <a
-                href="https://unsplash.com/@itworkonline">Jay
-                NLper</a> on <a
-                href="https://unsplash.com/photos/white-ceramic-plate-with-rice-and-stainless-steel-fork-XciY4hwqnNk">Unsplash</a>
+        <p>© Rose Pineda. Photo by 
+            <a href="https://unsplash.com/@itworkonline">Jay NLper</a> on 
+            <a href="https://unsplash.com">Unsplash</a>
         </p>
     </footer>
-
 
 </body>
 

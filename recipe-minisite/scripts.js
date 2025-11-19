@@ -1,51 +1,29 @@
-// JS for responsive menu demo
-// file renamed to "scripts.js" (plural) after the demo
+// scripts.js for responsive menu
 
-// function to hide/show menu items 
-function clickNav(bodyClicked) {
-    let navHandle = document.querySelector("nav");
-    let burgerWasClicked = navHandle.classList.contains("clicked");
-    if (!bodyClicked) navHandle.classList.toggle("clicked"); // ...toggle a "clicked" class on the nav
-    else navHandle.classList.remove("clicked");
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const menuPanel = document.getElementById("menuPanel");
 
-    // remove menu .clicked if burger is closed
-    if (burgerWasClicked || bodyClicked) {
-        let allMenus = document.querySelectorAll("nav > ul > li");
-        for (const eachMenu of allMenus) {
-            eachMenu.classList.remove("clicked");
-        }
-    }
-}
-
-// load click events after DOM loaded
-document.addEventListener("DOMContentLoaded", function () {
-
-    // respond to clicks on the burger
-    document.querySelector("#navBurger").addEventListener("click", function (e) {
-        clickNav(false);
+    // Toggle menu visibility on burger click
+    menuToggle.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent click from bubbling to html
+        menuPanel.classList.toggle("visible");
     });
 
-    // handles to all topline nav items
-    let allMenus = document.querySelectorAll("nav > ul > li");
-    for (const eachMenu of allMenus) {
-        // loop through collection of handles individually
-        eachMenu.addEventListener("click", function (e) {
-            let wasClicked = eachMenu.classList.contains("clicked");
-            let allMenus2 = document.querySelectorAll("nav > ul > li");
-            for (const eachMenu2 of allMenus2) {
-                eachMenu2.classList.remove("clicked");
-            }
-            if (!wasClicked) {
-                eachMenu.classList.add("clicked"); // if this is newly clicked, add click class back
-            }
+    // Close menu if clicking outside the nav
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest("#menuPanel") && !e.target.closest("#menuToggle")) {
+            menuPanel.classList.remove("visible");
+        }
+    });
+
+    // Optional: Toggle submenus inside the panel
+    const dropdownItems = menuPanel.querySelectorAll(".dropdown > a");
+    dropdownItems.forEach(item => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault(); // prevent default anchor behavior
+            const parent = item.parentElement;
+            parent.classList.toggle("open");
         });
-    }
-
-    // close nav if someone clicks outside nav
-    document.querySelector("html").addEventListener("click", function (e) {
-        if (!e.target.closest("nav")) {
-            clickNav(true);
-        }
     });
-
 });

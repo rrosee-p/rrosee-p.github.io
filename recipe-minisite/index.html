@@ -1,61 +1,62 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Mini Site</title>
+    <title>Recipe Hub</title>
 
-    <!-- external and internal CSS -->
-    <link rel="stylesheet" href="styles.css" media="all">
-    <style>
-        /* in-file CSS here */
-    </style>
+    <!-- external styles -->
+    <link rel="stylesheet" href="styles.css">
 
-    <!-- external and internal JavaScript -->
-    <script src="scripts.js" defer></script>
-    <script>
-        // in-page JavaScript here
-    </script>
-
+    <!-- page-specific JS -->
+    <script defer src="scripts.js"></script>
 </head>
 
-<body class="home">
-    <nav id="mainNav">
-        <a id="navBurger">&#9776;</a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
+<body class="homepage">
 
-            <li><a href="#">My Recipes</a>
-                <ul>
-                    <li><a href="recipe 1.html">Spanish Rice</a></li>
-                    <li><a href="recipe 2.html">French Toast</a></li>
-                    <li><a href="recipe 3.html">Homemade Brownies</a></li>
-                </ul>
-            </li>
+    <!-- ===== NEW NAVBAR DESIGN ===== -->
+    <header class="topbar">
+        <div class="logo-area">
+            <h1>My Recipe Hub</h1>
+        </div>
 
-            <li><a href="#">Favorite Recipe Sites</a>
-                <ul>
-                    <li><a href="https://store.177milkstreet.com/?msclkid=bed3901619c71a501553f8ef67091538&utm_cid=605413306&utm_group=All%20Products&utm_placement=&utm_source=bing&utm_medium=cpc&utm_campaign=PMAX%20%7C%20All%20Products&utm_term=store.177milkstreet.com&utm_content=All%20Products" target="_blank">Milke Street Store</a></li>
-                    <li><a href="https://www.delish.com/cooking/recipe-ideas/g3338/best-weeknight-dinners/?utm_source=bing&utm_medium=cpc&utm_campaign=mgu_bg_del_d_bm_prog_org_us_g3338&msclkid=537069536dbd1996eafa01aa137339fe" target="_blank">Delish</a></li>
-                    <li><a href="https://www.williams-sonoma.com/recipe/?Kenshoo=_k_039b14f068d21dc1a0087c09161c1168_k_&cm_ven=NonBrandSearch&cm_cat=MSN&cm_pla=NonBrand_Search_Recipes_Exact&cm_ite=recipes_53356673_kwd-73736206327161:loc-190&prof=404&camp=19852&kct=msn&kchid=803&criteriaid=kwd-73736206327161:loc-190&campaignid=53356673&locphy=110598&adgroupid=1179776889290615&cid=73736257158232&kdv=c&kext=&kpid=&kpg=&queryStr=recipe%20sites&npclid=039b14f068d21dc1a0087c09161c1168&ken_s2s=31862&msclkid=039b14f068d21dc1a0087c09161c1168" target="_blank">Williams Sonoma</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+        <!-- Mobile toggle button -->
+        <button id="menuToggle" aria-label="Open Menu">☰</button>
 
+        <nav class="menu-panel" id="menuPanel">
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="#">My Recipes ▾</a>
+                    <ul class="dropdown-list">
+                        <li><a href="recipe 1.html">Spanish Rice</a></li>
+                        <li><a href="recipe 2.html">French Toast</a></li>
+                        <li><a href="recipe 3.html">Homemade Brownies</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Favorite Sites ▾</a>
+                    <ul class="dropdown-list">
+                        <li><a href="https://store.177milkstreet.com" target="_blank">Milk Street Store</a></li>
+                        <li><a href="https://www.delish.com" target="_blank">Delish</a></li>
+                        <li><a href="https://www.williams-sonoma.com/recipe" target="_blank">Williams Sonoma</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== NEW NAV JS (More modern + different from other student) ===== -->
     <script>
-        const navBurger = document.getElementById('navBurger');
-        const nav = document.getElementById('mainNav');
+        const toggleBtn = document.getElementById('menuToggle');
+        const menuPanel = document.getElementById('menuPanel');
 
-        navBurger.addEventListener('click', () => {
-            nav.classList.toggle('show-menu');
+        toggleBtn.addEventListener('click', () => {
+            menuPanel.classList.toggle('visible');
         });
     </script>
 
-
 </body>
-
 </html>

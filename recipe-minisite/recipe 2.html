@@ -1,128 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>French Toast</title>
 
-    <!-- external and internal CSS -->
-    <link rel="stylesheet" href="styles.css" media="all">
-    <style>
-        /* base (mobile) styles */
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: 300px;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .recipe-container {
-            display: flex;
-            flex-direction: coloumn;
-            /* mobile = stacked vertically*/
-            justify-content: space-between;
-            /*spacing between the two coloumns*/
-            gap: 40px;
-            padding: 20px;
-
-        }
-
-        .ingredients,
-        .directions {
-            width: 100%;
-        }
-
-        /*desktop / landscape tablet view*/
-        @media (min-width: 768px) {
-            recipe-container {
-                flex-direction: row;
-                /*put ingredients and directions side-by-side*/
-                justify-content: space-between;
-                align-items: flex-start;
-                gap: 40px;
-            }
-
-            .ingredients,
-            .directions {
-                flex: 1;
-                min-width: 300px;
-            }
-        }
-    </style>
-
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>French Toast</h1>
-        <img src="joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg">
-        <p>A delicious and easy to make recipe!</p>
+    <!-- HEADER WITH BANNER IMAGE -->
+    <header class="hero-banner">
+        <div class="overlay">
+            <h1>French Toast</h1>
+            <p>A delicious and easy-to-make recipe!</p>
+        </div>
     </header>
 
+    <!-- MAIN RECIPE CONTENT -->
     <main>
         <div class="recipe-container">
-            <div class="ingredients">
+
+            <!-- Ingredients -->
+            <div class="ingredients box">
                 <h2>Ingredients</h2>
-            <ul>
-                <li>French Toast Ingredients
-                    <ul>
-                        <li>6 slices of white bread (or whichever bread you prefer)</li>
-                        <li>2 eggs</li>
-                        <li>1 cup of whole milk</li>
-                        <li>1/2 tsp nutmeg</li>
-                        <li>1/4 tsp cinnamon</li>
-                        <li>3 tbsp butter</li>
-                        <li>Whipped Cream</li>
-                        <li>Sliced Strawberries</li>
-                        <li>Maple Syrup</li>
-                    </ul>
-                </li>
+                <ul>
+                    <li>6 slices of white bread (or preferred bread)</li>
+                    <li>2 eggs</li>
+                    <li>1 cup whole milk</li>
+                    <li>1/2 tsp nutmeg</li>
+                    <li>1/4 tsp cinnamon</li>
+                    <li>3 tbsp butter</li>
+                    <li>Whipped cream</li>
+                    <li>Sliced strawberries</li>
+                    <li>Maple syrup</li>
+                </ul>
             </div>
 
-            <div class="directions">
+            <!-- Directions -->
+            <div class="directions box">
                 <h2>Directions</h2>
-                        <li>In a bowl, whisk together eggs, milk, nutmeg and cinnamon.</li>
-                        <li>Coat each slice of prferred bread evenly in egg mixture.</li>
-                        <li>Bring a skillet to medium heat and add 1 tbsp butter.</li>
-                        <li>Add 2 slices of bread and cook for 2-3 minutes per side, until golden brown. Repeat for remaining slices.</li>
-                        <li>Add 3 slices to each plate and top with sliced strawberries, a dallop of whipped cream and a sprinkle of powdered sugar.</li>
-                        <li>Serve with maple syrup</li>
-                        <li>And enjoy!</li>
-            </ol>
+                <ol>
+                    <li>In a bowl, whisk together eggs, milk, nutmeg, and cinnamon.</li>
+                    <li>Coat each slice of bread evenly in the egg mixture.</li>
+                    <li>Heat a skillet to medium heat and add 1 tbsp butter.</li>
+                    <li>Cook 2 slices of bread for 2–3 minutes per side, until golden. Repeat for remaining slices.</li>
+                    <li>Plate 3 slices per serving, top with strawberries, whipped cream, and a sprinkle of powdered sugar.</li>
+                    <li>Serve with maple syrup.</li>
+                    <li>Enjoy!</li>
+                </ol>
             </div>
+
         </div>
-
-        
-
     </main>
+
+    <!-- FOOTER -->
     <footer>
-        <p>© Rose Pineda. Photo by <a
-                href="https://unsplash.com/@miracletwentyone">Joseph
-                Gonzalez</a> on <a
-                href="https://unsplash.com/photos/toast-bread-with-blueberry-on-black-plate-zcUgjyqEwe8">Unsplash</a>
+        <p>© Rose Pineda. Photo by 
+            <a href="https://unsplash.com/@miracletwentyone">Joseph Gonzalez</a> on 
+            <a href="https://unsplash.com/photos/toast-bread-with-blueberry-on-black-plate-zcUgjyqEwe8">Unsplash</a>
         </p>
     </footer>
 
-
 </body>
-
 </html>
