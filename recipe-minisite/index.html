@@ -1,98 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rose's Cozy Recipes</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe Minisite</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
-<body class="page-home">
+<body>
 
-  <!-- NAV (place at top of body on every page) -->
-  <header class="topbar">
-    <div class="brand">
-      <h1>Rose's Cozy Recipes</h1>
-      <p class="tag">simple. sweet. made with love.</p>
-    </div>
-
-    <button id="menuToggle" class="menu-btn" aria-expanded="false" aria-label="Open menu">☰</button>
-
-    <nav id="menuPanel" class="menu-panel" aria-hidden="true">
-      <ul class="menu-list">
+<nav>
+    <a href="#" id="menuToggle">☰ Menu</a>
+    <ul>
         <li><a href="index.html">Home</a></li>
-
-        <li class="dropdown">
-          <a href="#" class="drop-toggle">My Recipes ▾</a>
-          <ul class="dropdown-list">
-            <li><a href="recipe1.html">Spanish Rice</a></li>
-            <li><a href="recipe2.html">French Toast</a></li>
-            <li><a href="recipe3.html">Homemade Brownies</a></li>
-          </ul>
+        <li>
+            <a href="#">My Recipes</a>
+            <ul>
+                <li><a href="recipe1.html">Spanish Rice</a></li>
+                <li><a href="recipe2.html">French Toast</a></li>
+                <li><a href="recipe3.html">Homemade Brownies</a></li>
+            </ul>
         </li>
-
-        <li class="dropdown">
-          <a href="#" class="drop-toggle">Favorite Recipe Sites ▾</a>
-          <ul class="dropdown-list">
-            <li><a href="https://www.delish.com" target="_blank" rel="noopener">Delish</a></li>
-            <li><a href="https://www.bonappetit.com" target="_blank" rel="noopener">Bon Appétit</a></li>
-            <li><a href="https://www.allrecipes.com" target="_blank" rel="noopener">Allrecipes</a></li>
-          </ul>
+        <li>
+            <a href="#">Favorite Recipe Sites</a>
+            <ul>
+                <li><a href="https://www.delish.com" target="_blank">Delish</a></li>
+                <li><a href="https://www.allrecipes.com" target="_blank">AllRecipes</a></li>
+                <li><a href="https://www.foodnetwork.com" target="_blank">Food Network</a></li>
+            </ul>
         </li>
-      </ul>
-    </nav>
-  </header>
+    </ul>
+</nav>
 
-  <!-- HERO -->
-  <main>
-    <section class="home-hero">
-      <div class="hero-inner">
-        <h2>Welcome to my cozy recipe minisite</h2>
-        <p>Three family favorites, redesigned with pastel vibes and easy step-by-step directions.</p>
-        <a class="cta" href="recipe1.html">Try Spanish Rice →</a>
-      </div>
-    </section>
+<header class="hero-banner">
+    <h1>Welcome to My Recipe Minisite</h1>
+    <p>Discover easy and delicious recipes for everyone!</p>
+    <img src="hero-image.jpg" alt="Delicious food">
+</header>
 
-    <!-- FEATURE CARDS -->
-    <section class="card-grid">
-      <article class="feature">
-        <div class="feature-photo" style="background-image:url('jay-nlper-XciY4hwqnNk-unsplash.jpg')" aria-hidden="true"></div>
-        <div class="feature-body">
-          <h3>Spanish Rice</h3>
-          <p>Toasty rice with tomato and savory seasonings — a perfect side for weeknights.</p>
-          <a href="recipe1.html" class="link-btn">Open recipe</a>
+<main>
+    <div class="recipe-container">
+        <div class="box">
+            <h2>Spanish Rice</h2>
+            <p><a href="recipe1.html">View Recipe →</a></p>
         </div>
-      </article>
-
-      <article class="feature">
-        <div class="feature-photo" style="background-image:url('joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg')" aria-hidden="true"></div>
-        <div class="feature-body">
-          <h3>French Toast</h3>
-          <p>Fluffy slices, cinnamon-kissed — an easy cozy breakfast that feels fancy.</p>
-          <a href="recipe2.html" class="link-btn">Open recipe</a>
+        <div class="box">
+            <h2>French Toast</h2>
+            <p><a href="recipe2.html">View Recipe →</a></p>
         </div>
-      </article>
-
-      <article class="feature">
-        <div class="feature-photo" style="background-image:url('michelle-tsang-1rqk6XVnw44-unsplash.jpg')" aria-hidden="true"></div>
-        <div class="feature-body">
-          <h3>Homemade Brownies</h3>
-          <p>Fudgy, crinkly-top brownies for dessert lovers. Bake, cool, and enjoy.</p>
-          <a href="recipe3.html" class="link-btn">Open recipe</a>
+        <div class="box">
+            <h2>Homemade Brownies</h2>
+            <p><a href="recipe3.html">View Recipe →</a></p>
         </div>
-      </article>
-    </section>
+    </div>
+</main>
 
-    <!-- ABOUT / FOOTER CTA -->
-    <section class="about">
-      <h3>About this minisite</h3>
-      <p>This tiny project shows responsive recipe pages, a pastel design system, and a mobile-friendly menu. Built for class — drop any questions in your group post with the URL after publishing.</p>
-    </section>
-  </main>
+<footer>
+    <p>© Rose Pineda</p>
+</footer>
 
-  <footer class="site-footer">
-    <p>© Rose Pineda — photos via Unsplash</p>
-  </footer>
-
-<script src="scripts.js" defer></script>
 </body>
 </html>

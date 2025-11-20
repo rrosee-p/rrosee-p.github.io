@@ -1,102 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Spanish Rice — Rose's Cozy Recipes</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Rice</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
-<body class="page-recipe">
+<body>
 
-  <!-- NAV -->
-  <header class="topbar">
-    <div class="brand">
-      <h1>Rose's Cozy Recipes</h1>
-    </div>
-
-    <button id="menuToggle" class="menu-btn" aria-expanded="false" aria-label="Open menu">☰</button>
-
-    <nav id="menuPanel" class="menu-panel" aria-hidden="true">
-      <ul class="menu-list">
+<nav>
+    <a href="#" id="menuToggle">☰ Menu</a>
+    <ul>
         <li><a href="index.html">Home</a></li>
-
-        <li class="dropdown">
-          <a href="#" class="drop-toggle">My Recipes ▾</a>
-          <ul class="dropdown-list">
-            <li><a href="recipe1.html">Spanish Rice</a></li>
-            <li><a href="recipe2.html">French Toast</a></li>
-            <li><a href="recipe3.html">Homemade Brownies</a></li>
-          </ul>
+        <li>
+            <a href="#">My Recipes</a>
+            <ul>
+                <li><a href="recipe1.html">Spanish Rice</a></li>
+                <li><a href="recipe2.html">French Toast</a></li>
+                <li><a href="recipe3.html">Homemade Brownies</a></li>
+            </ul>
         </li>
-
-        <li class="dropdown">
-          <a href="#" class="drop-toggle">Favorite Recipe Sites ▾</a>
-          <ul class="dropdown-list">
-            <li><a href="https://www.delish.com" target="_blank" rel="noopener">Delish</a></li>
-            <li><a href="https://www.bonappetit.com" target="_blank" rel="noopener">Bon Appétit</a></li>
-            <li><a href="https://www.allrecipes.com" target="_blank" rel="noopener">Allrecipes</a></li>
-          </ul>
+        <li>
+            <a href="#">Favorite Recipe Sites</a>
+            <ul>
+                <li><a href="https://www.delish.com" target="_blank">Delish</a></li>
+                <li><a href="https://www.allrecipes.com" target="_blank">AllRecipes</a></li>
+                <li><a href="https://www.foodnetwork.com" target="_blank">Food Network</a></li>
+            </ul>
         </li>
-      </ul>
-    </nav>
-  </header>
+    </ul>
+</nav>
 
-  <!-- HERO BANNER -->
-  <header class="hero-banner small">
-    <div class="overlay">
-      <h1 class="hero-title">Spanish Rice</h1>
-      <p class="hero-sub">A warm family favorite — toasty rice with tomato and seasonings.</p>
-    </div>
-  </header>
+<header class="hero-banner">
+    <h1>Spanish Rice</h1>
+    <p>A simple and tasty recipe using washed rice!</p>
+    <img src="spanish-rice.jpg" alt="Spanish Rice">
+</header>
 
-  <main>
-    <article class="recipe-card cute">
-      <div class="recipe-intro">
-        <h2>Quick facts</h2>
-        <p>Prep: 10 min · Cook: 35 min · Serves 4</p>
-      </div>
-
-      <div class="recipe-sections">
-        <section class="ingredients">
-          <h3>Ingredients</h3>
-          <ul>
+<main class="recipe-container">
+    <div class="box ingredients">
+        <h2>Ingredients</h2>
+        <ul>
             <li>2 cups washed rice</li>
             <li>3 cups water</li>
-            <li>3 tbsp tomato paste</li>
-          </ul>
+            <li>Tomato paste</li>
+        </ul>
+        <h3>Seasonings</h3>
+        <ul>
+            <li>Onion seasoning</li>
+            <li>Garlic seasoning</li>
+            <li>Salt & Pepper</li>
+            <li>Chicken bouillon</li>
+        </ul>
+    </div>
 
-          <h4>Seasonings</h4>
-          <ul>
-            <li>1 tsp onion powder</li>
-            <li>1 tsp garlic powder</li>
-            <li>Salt & pepper to taste</li>
-            <li>1 tsp chicken bouillon powder</li>
-          </ul>
-        </section>
+    <div class="box directions">
+        <h2>Directions</h2>
+        <ol>
+            <li>Preheat pan to medium heat.</li>
+            <li>Add oil and heat up.</li>
+            <li>Add rice, stir until golden brown.</li>
+            <li>Add tomato paste and mix for 2 minutes.</li>
+            <li>Add water and seasonings.</li>
+            <li>Stir until combined.</li>
+            <li>Cover pan, cook 30 minutes on low heat.</li>
+            <li>Turn off heat, let sit 15 minutes.</li>
+        </ol>
+    </div>
+</main>
 
-        <section class="directions">
-          <h3>Directions</h3>
-          <ol>
-            <li>Heat a pan over medium heat and add a splash of oil.</li>
-            <li>Add rice and stir until lightly golden.</li>
-            <li>Stir in tomato paste until evenly coated.</li>
-            <li>Pour in 3 cups water and add seasonings.</li>
-            <li>Bring to a simmer, reduce to low, cover, and cook 30 minutes.</li>
-            <li>Turn off heat and let sit 10–15 minutes before fluffing and serving.</li>
-          </ol>
-        </section>
-      </div>
-
-      <div class="recipe-foot">
-        <a class="back-link" href="index.html">← Back to home</a>
-      </div>
-    </article>
-  </main>
-
-<footer class="site-footer">
-  <p>© Rose Pineda — photo: Jay NLper on Unsplash</p>
+<footer>
+    <p>© Rose Pineda</p>
 </footer>
 
-<script src="scripts.js" defer></script>
 </body>
 </html>
