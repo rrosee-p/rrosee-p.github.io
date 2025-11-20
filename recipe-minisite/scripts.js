@@ -1,43 +1,39 @@
-// scripts.js for responsive menu
-
+// scripts.js — menu toggle and dropdowns (mobile-first)
 document.addEventListener("DOMContentLoaded", () => {
-    const nav = document.querySelector("nav");
-    const navBurger = document.getElementById("navBurger");
 
-    // Toggle the whole nav when burger is clicked
-    navBurger.addEventListener("click", (e) => {
-        e.stopPropagation();
-        nav.classList.toggle("clicked");
+  // we have multiple pages that reuse the same IDs — pick the first matching menuToggle/menuPanel on the page
+  const menuToggle = document.getElementById("menuToggle");
+  const menuPanel = document.getElementById("menuPanel");
+
+  // if menu elements exist on the page, wire them up
+  if (menuToggle && menuPanel) {
+    // open/close mobile panel
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const visible = menuPanel.classList.toggle("visible");
+      // accessibility attributes
+      menuToggle.setAttribute("aria-expanded", visible ? "true" : "false");
+      menuPanel.setAttribute("aria-hidden", visible ? "false" : "true");
     });
 
-    // Close nav if clicking outside of it
+    // close menu by clicking outside
     document.addEventListener("click", (e) => {
-        if (!e.target.closest("nav") && !e.target.closest("#navBurger")) {
-            nav.classList.remove("clicked");
-
-            // Close all dropdowns too
-            const allMenus = document.querySelectorAll("nav > ul > li");
-            allMenus.forEach(menu => menu.classList.remove("clicked"));
-        }
+      if (!e.target.closest("#menuPanel") && !e.target.closest("#menuToggle")) {
+        menuPanel.classList.remove("visible");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuPanel.setAttribute("aria-hidden", "true");
+      }
     });
 
-    // Handle dropdown toggles
-    const topMenus = document.querySelectorAll("nav > ul > li");
-    topMenus.forEach(menu => {
-        menu.addEventListener("click", (e) => {
-            // stop menu click from closing nav
-            e.stopPropagation();
-
-            // toggle clicked state
-            const alreadyClicked = menu.classList.contains("clicked");
-
-            // close all menus
-            topMenus.forEach(m => m.classList.remove("clicked"));
-
-            // reopen only if it was not previously clicked
-            if (!alreadyClicked) {
-                menu.classList.add("clicked");
-            }
-        });
+    // dropdown toggles inside the menu
+    const dropToggles = menuPanel.querySelectorAll(".drop-toggle");
+    dropToggles.forEach(toggle => {
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const parent = toggle.parentElement;
+        parent.classList.toggle("open");
+      });
     });
+  }
+
 });

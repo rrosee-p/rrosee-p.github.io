@@ -1,79 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homemade Brownies</title>
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Homemade Brownies — Rose's Cozy Recipes</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body class="page-recipe">
 
-<body>
+  <!-- NAV -->
+  <header class="topbar">
+    <div class="brand"><h1>Rose's Cozy Recipes</h1></div>
+    <button id="menuToggle" class="menu-btn" aria-expanded="false" aria-label="Open menu">☰</button>
+    <nav id="menuPanel" class="menu-panel" aria-hidden="true">
+      <ul class="menu-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="drop-toggle">My Recipes ▾</a>
+          <ul class="dropdown-list">
+            <li><a href="recipe1.html">Spanish Rice</a></li>
+            <li><a href="recipe2.html">French Toast</a></li>
+            <li><a href="recipe3.html">Homemade Brownies</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="drop-toggle">Favorite Recipe Sites ▾</a>
+          <ul class="dropdown-list">
+            <li><a href="https://www.delish.com" target="_blank" rel="noopener">Delish</a></li>
+            <li><a href="https://www.bonappetit.com" target="_blank" rel="noopener">Bon Appétit</a></li>
+            <li><a href="https://www.allrecipes.com" target="_blank" rel="noopener">Allrecipes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- HERO BANNER -->
-    <header class="hero-banner">
-        <div class="overlay">
-            <h1 class="hero-title">Homemade Brownies</h1>
-            <p class="hero-sub">Rich, fudgy, and baked with love.</p>
-        </div>
-    </header>
+  <header class="hero-banner small">
+    <div class="overlay">
+      <h1 class="hero-title">Homemade Brownies</h1>
+      <p class="hero-sub">Rich, fudgy, and absolutely craveable.</p>
+    </div>
+  </header>
 
-    <!-- MAIN CONTENT -->
-    <main>
-        <section class="recipe-card">
+  <main>
+    <article class="recipe-card cute">
+      <div class="recipe-intro">
+        <h2>Quick facts</h2>
+        <p>Prep: 10 min · Cook: 25 min · Serves 9–12</p>
+      </div>
 
-            <!-- Intro -->
-            <div class="recipe-intro">
-                <h2>🍫 Fudgy, Crinkly-Top Perfection</h2>
-                <p>These brownies bake up soft, chocolatey, and irresistibly rich. Perfect for any sweet craving!</p>
-            </div>
-
-            <div class="recipe-sections">
-
-                <!-- Ingredients -->
-                <div class="ingredients">
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>Baking spray</li>
-                        <li>2 cups white sugar</li>
-                        <li>1 1/4 cups all-purpose flour</li>
-                        <li>1 cup butter, melted</li>
-                        <li>4 large eggs</li>
-                        <li>1/2 cup cocoa powder</li>
-                        <li>1 tsp vanilla extract</li>
-                        <li>1/2 tsp baking powder</li>
-                        <li>1/2 tsp salt</li>
-                        <li>1/2 cup walnuts</li>
-                    </ul>
-                </div>
-
-                <!-- Directions -->
-                <div class="directions">
-                    <h3>Directions</h3>
-                    <ol>
-                        <li>Preheat oven to 350°F (175°C). Grease a 9×13-inch pan with baking spray.</li>
-                        <li>In a large bowl, whisk together sugar, flour, melted butter, eggs, cocoa powder, vanilla, baking powder, and salt.</li>
-                        <li>Spread the batter into the prepared pan.</li>
-                        <li>Sprinkle walnuts evenly over the top.</li>
-                        <li>Bake for 20–30 minutes, until the top is crinkled and a toothpick inserted comes out clean.</li>
-                        <li>Let cool fully before cutting for clean edges.</li>
-                    </ol>
-                </div>
-
-            </div>
-
+      <div class="recipe-sections">
+        <section class="ingredients">
+          <h3>Ingredients</h3>
+          <ul>
+            <li>2 cups white sugar</li>
+            <li>1 1/4 cups all-purpose flour</li>
+            <li>1 cup butter, melted</li>
+            <li>4 large eggs</li>
+            <li>1/2 cup cocoa powder</li>
+            <li>1 tsp vanilla</li>
+            <li>1/2 tsp baking powder</li>
+            <li>1/2 tsp salt</li>
+            <li>1/2 cup walnuts (optional)</li>
+          </ul>
         </section>
-    </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© Rose Pineda. Photo by 
-            <a href="https://unsplash.com/@petitesweetsnz">Michelle Tsang</a> on 
-            <a href="https://unsplash.com/s/photos/brownies">Unsplash</a>
-        </p>
-    </footer>
+        <section class="directions">
+          <h3>Directions</h3>
+          <ol>
+            <li>Preheat oven to 350°F. Grease a 9×13 pan.</li>
+            <li>Whisk sugar, flour, melted butter, eggs, cocoa, vanilla, baking powder, and salt until combined.</li>
+            <li>Pour batter into the pan and sprinkle walnuts on top if using.</li>
+            <li>Bake 20–30 minutes until a toothpick comes out mostly clean.</li>
+            <li>Cool completely before slicing for best results.</li>
+          </ol>
+        </section>
+      </div>
 
+      <div class="recipe-foot">
+        <a class="back-link" href="index.html">← Back to home</a>
+      </div>
+    </article>
+  </main>
+
+<footer class="site-footer">
+  <p>© Rose Pineda — photo: Michelle Tsang on Unsplash</p>
+</footer>
+
+<script src="scripts.js" defer></script>
 </body>
 </html>

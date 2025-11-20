@@ -1,79 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>French Toast</title>
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>French Toast — Rose's Cozy Recipes</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body class="page-recipe">
 
-<body>
+  <!-- NAV -->
+  <header class="topbar">
+    <div class="brand"><h1>Rose's Cozy Recipes</h1></div>
+    <button id="menuToggle" class="menu-btn" aria-expanded="false" aria-label="Open menu">☰</button>
+    <nav id="menuPanel" class="menu-panel" aria-hidden="true">
+      <ul class="menu-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="drop-toggle">My Recipes ▾</a>
+          <ul class="dropdown-list">
+            <li><a href="recipe1.html">Spanish Rice</a></li>
+            <li><a href="recipe2.html">French Toast</a></li>
+            <li><a href="recipe3.html">Homemade Brownies</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="drop-toggle">Favorite Recipe Sites ▾</a>
+          <ul class="dropdown-list">
+            <li><a href="https://www.delish.com" target="_blank" rel="noopener">Delish</a></li>
+            <li><a href="https://www.bonappetit.com" target="_blank" rel="noopener">Bon Appétit</a></li>
+            <li><a href="https://www.allrecipes.com" target="_blank" rel="noopener">Allrecipes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- HERO BANNER -->
-    <header class="hero-banner">
-        <div class="overlay">
-            <h1 class="hero-title">French Toast</h1>
-            <p class="hero-sub">Warm, fluffy, golden perfection — a breakfast classic.</p>
-        </div>
-    </header>
+  <header class="hero-banner small">
+    <div class="overlay">
+      <h1 class="hero-title">French Toast</h1>
+      <p class="hero-sub">Warm, fluffy, cinnamon-kissed slices — weekend vibes.</p>
+    </div>
+  </header>
 
-    <!-- MAIN RECIPE CARD -->
-    <main>
-        <section class="recipe-card">
+  <main>
+    <article class="recipe-card cute">
+      <div class="recipe-intro">
+        <h2>Quick facts</h2>
+        <p>Prep: 8 min · Cook: 10 min · Serves 2–3</p>
+      </div>
 
-            <!-- Intro -->
-            <div class="recipe-intro">
-                <h2>🥞 A Cozy Morning Favorite</h2>
-                <p>This French toast recipe is simple, comforting, and perfect for starting your day with something sweet.</p>
-            </div>
-
-            <div class="recipe-sections">
-
-                <!-- INGREDIENTS -->
-                <div class="ingredients">
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>6 slices of white bread (or preferred bread)</li>
-                        <li>2 eggs</li>
-                        <li>1 cup whole milk</li>
-                        <li>1/2 tsp nutmeg</li>
-                        <li>1/4 tsp cinnamon</li>
-                        <li>3 tbsp butter</li>
-                        <li>Whipped cream</li>
-                        <li>Sliced strawberries</li>
-                        <li>Maple syrup</li>
-                    </ul>
-                </div>
-
-                <!-- DIRECTIONS -->
-                <div class="directions">
-                    <h3>Directions</h3>
-                    <ol>
-                        <li>In a bowl, whisk together eggs, milk, nutmeg, and cinnamon.</li>
-                        <li>Coat each slice of bread evenly in the egg mixture.</li>
-                        <li>Heat a skillet to medium heat and add 1 tbsp butter.</li>
-                        <li>Cook 2 slices of bread for 2–3 minutes per side until golden. Repeat for remaining slices.</li>
-                        <li>Plate 3 slices per serving, top with strawberries, whipped cream, and powdered sugar.</li>
-                        <li>Serve with maple syrup.</li>
-                        <li>Enjoy!</li>
-                    </ol>
-                </div>
-
-            </div>
-
+      <div class="recipe-sections">
+        <section class="ingredients">
+          <h3>Ingredients</h3>
+          <ul>
+            <li>6 slices bread</li>
+            <li>2 eggs</li>
+            <li>1 cup whole milk</li>
+            <li>1/2 tsp nutmeg</li>
+            <li>1/4 tsp cinnamon</li>
+            <li>3 tbsp butter</li>
+            <li>Whipped cream & berries to serve</li>
+          </ul>
         </section>
-    </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© Rose Pineda. Photo by 
-            <a href="https://unsplash.com/@miracletwentyone">Joseph Gonzalez</a> on 
-            <a href="https://unsplash.com/photos/toast-bread-with-blueberry-on-black-plate-zcUgjyqEwe8">Unsplash</a>
-        </p>
-    </footer>
+        <section class="directions">
+          <h3>Directions</h3>
+          <ol>
+            <li>Whisk eggs, milk, nutmeg, and cinnamon in a wide bowl.</li>
+            <li>Dip bread slices to coat both sides.</li>
+            <li>Heat skillet with butter and cook slices 2–3 minutes per side until golden.</li>
+            <li>Serve topped with berries, whipped cream, and maple syrup.</li>
+          </ol>
+        </section>
+      </div>
 
+      <div class="recipe-foot">
+        <a class="back-link" href="index.html">← Back to home</a>
+      </div>
+    </article>
+  </main>
+
+<footer class="site-footer">
+  <p>© Rose Pineda — photo: Joseph Gonzalez on Unsplash</p>
+</footer>
+
+<script src="scripts.js" defer></script>
 </body>
 </html>
