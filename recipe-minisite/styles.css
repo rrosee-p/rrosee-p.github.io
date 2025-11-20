@@ -1,143 +1,182 @@
-/* ========================
-   Base Styles (Mobile First)
-======================== */
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff8f0;
-    color: #333;
+/* ==============================
+   Basic Reset
+============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2 {
-    text-align: center;
-    color: #b85c38;
+/* ==============================
+   Body & Layout
+============================== */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+body.home {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.home header,
+body.home main,
+body.home footer {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+}
+
+/* ==============================
+   Headings & Images
+============================== */
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 h2 {
-    margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+img {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 100%;
+  height: 300px;
 }
 
 p {
-    text-align: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* ========================
-   Navigation Menu
-======================== */
-
-nav {
-    background-color: #f5d6c6;
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    position: relative;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #7a3b12;
-    padding: 5px 10px;
-    display: block;
-}
-
-nav ul li ul {
-    display: none;
-    position: absolute;
-    background-color: #f9c8b7;
-    top: 30px;
-    left: 0;
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li:hover ul {
-    display: block;
-}
-
-nav ul li ul li {
-    display: block;
-}
-
-/* ========================
+/* ==============================
    Recipe Container
-======================== */
-
+============================== */
 .recipe-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
+  display: flex;
+  flex-direction: column; /* stacked vertically on mobile */
+  gap: 40px;
+  padding: 20px;
 }
 
-.box {
-    background-color: #ffe7d6;
-    padding: 15px;
-    border-radius: 10px;
+.ingredients,
+.directions {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fdfdfd;
 }
 
-.ingredients ul, .directions ol {
-    margin-left: 20px;
-}
-
-/* ========================
-   Hero Banner
-======================== */
-
-.hero-banner {
-    background-color: #f5d6c6;
-    padding: 50px 10px;
-    text-align: center;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-/* ========================
-   Images
-======================== */
-
-img {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
-/* ========================
-   Footer
-======================== */
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #f5d6c6;
-    margin-top: 20px;
-}
-
-/* ========================
-   Responsive Desktop
-======================== */
-
+/* Desktop / tablet layout */
 @media (min-width: 768px) {
-    .recipe-container {
-        flex-direction: row;
-        justify-content: space-around;
-    }
+  .recipe-container {
+    flex-direction: row; /* side-by-side */
+    justify-content: space-between;
+  }
 
-    .box {
-        width: 45%;
-    }
+  .ingredients,
+  .directions {
+    flex: 1;
+    min-width: 300px;
+  }
+}
 
-    nav ul li {
-        margin-right: 20px;
-    }
+/* ==============================
+   Navigation
+============================== */
+#navBurger {
+  display: none;
+  font-size: 28px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+}
+
+/* Navigation Layout */
+nav ul {
+  list-style-type: none;
+  background-color: #333;
+}
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+nav li:hover > a {
+  background-color: #555;
+}
+
+/* Submenu */
+nav ul ul {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+nav ul ul li {
+  display: block;
+}
+
+/* ==============================
+   Responsive Navigation
+============================== */
+@media screen and (max-width: 768px) {
+  #navBurger {
+    display: block;
+  }
+
+  nav > ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav.show-menu > ul {
+    display: flex;
+  }
+
+  nav > ul > li {
+    width: 100%;
+  }
+
+  nav ul ul {
+    position: static;
+  }
+
+  nav ul ul li a {
+    background-color: #555;
+  }
+}
+
+/* ==============================
+   Footer
+============================== */
+footer {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
 }
