@@ -1,160 +1,134 @@
-/* base (mobile) styles */
+/* styles.css — Modern & Minimal (mobile-first) */
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
 
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: 300px;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .recipe-container {
-            display: flex;
-            flex-direction: coloumn;
-            /* mobile = stacked vertically*/
-            justify-content: space-between;
-            /*spacing between the two coloumns*/
-            gap: 40px;
-            padding: 20px;
-
-        }
-        .ingredients,
-        .directions {
-            width: 100%;
-        }
-
-        /*desktop / landscape tablet view*/
-        @media (min-width: 768px) {
-            recipe-container {
-                flex-direction: row;
-                /*put ingredients and directions side-by-side*/
-                justify-content: space-between;
-                align-items: flex-start;
-                gap: 40px;
-            }
-
-            .ingredients,
-            .directions {
-                flex: 1;
-                min-width: 300px;
-            }
-        }
-
-       /* Basic Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Body + layout */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.45;
+  color: #222;
+  background: #f9f7f3;
+  padding: 16px;
 }
 
-#navBurger {
-  display: none;
-  font-size: 28px;
-  padding: 10px;
-  cursor: pointer;
-  background-color: #333;
-  color: white;
-}
+/* Container */
+.container { max-width: 980px; margin: 24px auto; padding: 0 12px; }
 
-/* Navigation Layout */
-nav ul {
-  list-style-type: none;
-  background-color: #333;
+/* NAV */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 980px;
+  margin: 0 auto 18px;
 }
-
-nav > ul > li {
+.burger {
   display: inline-block;
-  position: relative;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  font-size: 18px;
+  border-radius: 6px;
 }
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.nav-list .nav-item a,
+.nav-list .sub-toggle {
+  text-decoration: none;
+  color: #111;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.nav-list .nav-item a:hover,
+.nav-list .sub-toggle:hover { background: rgba(0,0,0,0.03); }
 
-nav a {
+/* Submenu */
+.has-sub { position: relative; }
+.sub-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: none;
+  min-width: 180px;
+  padding: 6px 0;
+  border-radius: 8px;
+}
+.sub-list li a {
   display: block;
-  padding: 10px 15px;
+  padding: 8px 12px;
+  color: #111;
+}
+.sub-list.open { display: block; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+  border-radius: 12px;
+  padding: 28px 16px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.hero-inner h1 { font-size: 1.8rem; margin-bottom: 8px; }
+.lead { color: #444; margin-bottom: 12px; }
+.cta {
+  display: inline-block;
+  background: #0b6cff;
   color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
   text-decoration: none;
 }
 
-nav li:hover > a {
-  background-color: #555;
+/* Cards */
+.cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 18px; }
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+  text-align: center;
+}
+.card img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+.card h2 { font-size: 1.1rem; margin-bottom: 8px; }
+.card .link { color: #0b6cff; text-decoration: none; font-weight: 600; }
+
+/* Recipe page layout */
+.recipe-page .recipe-header { text-align: center; padding: 8px 0 18px; }
+.recipe-hero { width: 100%; max-height: 320px; object-fit: cover; border-radius: 10px; margin: 12px 0; }
+.recipe-grid { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: start; }
+.ingredients, .directions { background: white; padding: 12px; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.04); }
+.ingredients h2, .directions h2 { margin-bottom: 8px; }
+
+/* Footer */
+.site-footer { max-width: 980px; margin: 22px auto 40px; text-align: center; color: #555; }
+
+/* Desktop / larger screens */
+@media (min-width: 760px) {
+  .nav-list { display: flex; }
+  .burger { display: none; }
+
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .recipe-grid { grid-template-columns: 320px 1fr; }
+  .hero-inner h1 { font-size: 2.4rem; }
 }
 
-/* Submenu */
-nav ul ul {
-  display: none;
-  position: absolute;
-  background-color: #444;
-  min-width: 160px;
-  z-index: 1000;
-}
-
-nav li:hover > ul {
-  display: block;
-}
-
-nav ul ul li {
-  display: block;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  #navBurger {
-    display: block;
-  }
-
-  nav > ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  nav.show-menu > ul {
-    display: flex;
-  }
-
-  nav > ul > li {
-    width: 100%;
-  }
-
-  nav ul ul {
-    position: static;
-  }
-
-  nav ul ul li a {
-    background-color: #555;
-  }
-}
-
-body.home {
-  background-image: url("Background Image.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex-grow: 1;
-}
-
-
-body.home header,
-body.home main,
-body.home footer {
-    background-color: rgba(255, 255, 255, 0.85);
-    
+/* Mobile menu states (when burger opens) */
+#mainMenu.open { display: flex !important; flex-direction: column; gap: 6px; }
+@media (max-width: 759px) {
+  .nav-list { display: none; }
+  .nav-list.open { display: flex; flex-direction: column; gap: 6px; width: 100%; }
+  .sub-list { position: static; display: none; box-shadow: none; border: none; padding-left: 12px; }
+  .sub-list.open { display: block; }
 }

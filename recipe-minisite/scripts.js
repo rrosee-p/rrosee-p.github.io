@@ -1,51 +1,37 @@
-// JS for responsive menu demo
-// file renamed to "scripts.js" (plural) after the demo
-
-// function to hide/show menu items 
-function clickNav(bodyClicked) {
-    let navHandle = document.querySelector("nav");
-    let burgerWasClicked = navHandle.classList.contains("clicked");
-    if (!bodyClicked) navHandle.classList.toggle("clicked"); // ...toggle a "clicked" class on the nav
-    else navHandle.classList.remove("clicked");
-
-    // remove menu .clicked if burger is closed
-    if (burgerWasClicked || bodyClicked) {
-        let allMenus = document.querySelectorAll("nav > ul > li");
-        for (const eachMenu of allMenus) {
-            eachMenu.classList.remove("clicked");
-        }
-    }
-}
-
-// load click events after DOM loaded
+// scripts.js — navigation behaviors (mobile-first)
 document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelectorAll("#burgerBtn");
+  const navs = document.querySelectorAll(".site-nav");
 
-    // respond to clicks on the burger
-    document.querySelector("#navBurger").addEventListener("click", function (e) {
-        clickNav(false);
+  // Toggle main menu visibility (mobile)
+  document.querySelectorAll("#burgerBtn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      const nav = this.closest(".site-nav");
+      const list = nav.querySelector("#mainMenu");
+      const expanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", String(!expanded));
+      list.classList.toggle("open");
     });
+  });
 
-    // handles to all topline nav items
-    let allMenus = document.querySelectorAll("nav > ul > li");
-    for (const eachMenu of allMenus) {
-        // loop through collection of handles individually
-        eachMenu.addEventListener("click", function (e) {
-            let wasClicked = eachMenu.classList.contains("clicked");
-            let allMenus2 = document.querySelectorAll("nav > ul > li");
-            for (const eachMenu2 of allMenus2) {
-                eachMenu2.classList.remove("clicked");
-            }
-            if (!wasClicked) {
-                eachMenu.classList.add("clicked"); // if this is newly clicked, add click class back
-            }
-        });
+  // Submenu toggles (for each nav instance)
+  document.querySelectorAll(".site-nav .has-sub").forEach(item => {
+    const toggle = item.querySelector(".sub-toggle");
+    const submenu = item.querySelector(".sub-list");
+    toggle.addEventListener("click", function (e) {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      submenu.classList.toggle("open");
+    });
+  });
+
+  // Close menus when clicking outside
+  document.documentElement.addEventListener("click", (e) => {
+    if (!e.target.closest(".site-nav")) {
+      document.querySelectorAll(".nav-list .sub-list.open").forEach(s => s.classList.remove("open"));
+      document.querySelectorAll(".sub-toggle[aria-expanded='true']").forEach(t => t.setAttribute("aria-expanded", "false"));
+      document.querySelectorAll("#mainMenu.open").forEach(m => m.classList.remove("open"));
+      document.querySelectorAll("#burgerBtn[aria-expanded='true']").forEach(b => b.setAttribute("aria-expanded", "false"));
     }
-
-    // close nav if someone clicks outside nav
-    document.querySelector("html").addEventListener("click", function (e) {
-        if (!e.target.closest("nav")) {
-            clickNav(true);
-        }
-    });
-
+  });
 });
