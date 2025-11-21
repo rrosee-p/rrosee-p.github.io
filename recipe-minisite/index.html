@@ -1,42 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+
+    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Mini Site</title>
+    <title>Recipe Mini-Site</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- External JS -->
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* in-file CSS here */
+    </style>
+
+    <!-- external and internal JavaScript -->
     <script src="scripts.js" defer></script>
+    <script>
+        // in-page JavaScript here
+    </script>
+
 </head>
 
 <body class="home">
-
-    <!-- NAVIGATION MENU -->
     <nav id="mainNav">
-        <a id="navBurger">&#9776; Menu</a>
+        <a id="navBurger">&#9776;</a>
         <ul>
             <li><a href="index.html">Home</a></li>
 
             <li><a href="#">My Recipes</a>
                 <ul>
-                    <li><a href="recipe1.html">Spanish Rice</a></li>
-                    <li><a href="recipe2.html">French Toast</a></li>
-                    <li><a href="recipe3.html">Homemade Brownies</a></li>
+                    <li><a href="recipe1.html">Banana Bread</a></li>
+                    <li><a href="recipe2.html">Cucumber Salad</a></li>
+                    <li><a href="recipe3.html">Peanut Butter Cookies</a></li>
                 </ul>
             </li>
 
             <li><a href="#">Favorite Recipe Sites</a>
                 <ul>
-                    <li><a href="https://www.delish.com" target="_blank">Delish</a></li>
-                    <li><a href="https://www.allrecipes.com" target="_blank">AllRecipes</a></li>
-                    <li><a href="https://www.foodnetwork.com" target="_blank">Food Network</a></li>
+                    <li><a href="https://www.foodnetwork.com/" target="_blank">AllRecipes</a></li>
+                    <li><a href="https://www.allrecipes.com/" target="_blank">Love and Lemons</a></li>
+                    <li><a href="https://www.delish.com/" target="_blank">Serious Eats</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 
+    <script>
+        const navBurger = document.getElementById('navBurger');
+        const nav = document.getElementById('mainNav');
+
+        navBurger.addEventListener('click', () => {
+            nav.classList.toggle('show-menu');
+        });
+    </script>
+
+
 </body>
+
 </html>
