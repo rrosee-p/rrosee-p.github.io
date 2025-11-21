@@ -1,34 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <!-- meta tags and title -->
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Mini-Site</title>
 
-    <!-- external and internal CSS -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css" media="all">
+
+    <!-- Internal CSS (optional space for overrides) -->
     <style>
-        /* in-file CSS here */
+        /* Add page-specific styles here if needed */
     </style>
 
-    <!-- external and internal JavaScript -->
+    <!-- External JS -->
     <script src="scripts.js" defer></script>
-    <script>
-        // in-page JavaScript here
-    </script>
 
+    <!-- Internal JS (Optional) -->
+    <script>
+        // You can place extra page-specific JavaScript here
+  
+  </script>
 </head>
 
 <body class="home">
+
+    <!-- Navigation Bar -->
     <nav id="mainNav">
-        <a id="navBurger">&#9776;</a>
+        <!-- Mobile menu icon -->
+        <button id="navBurger" aria-label="Toggle menu">&#9776;</button>
+
         <ul>
             <li><a href="index.html">Home</a></li>
 
-            <li><a href="#">My Recipes</a>
+            <!-- Dropdown: My Recipes -->
+            <li>
+                <a href="#">My Recipes</a>
                 <ul>
                     <li><a href="recipe 1.html">Spanish Rice</a></li>
                     <li><a href="recipe 2.html">French Toast</a></li>
@@ -36,22 +45,25 @@
                 </ul>
             </li>
 
-            <li><a href="#">Favorite Recipe Sites</a>
+            <!-- Dropdown: Recipe Sites -->
+            <li>
+                <a href="#">Favorite Recipe Sites</a>
                 <ul>
-                    <li><a href="https://www.foodnetwork.com/" target="_blank">AllRecipes</a></li>
-                    <li><a href="https://www.allrecipes.com/" target="_blank">Love and Lemons</a></li>
-                    <li><a href="https://www.delish.com/" target="_blank">Serious Eats</a></li>
+                    <li><a href="https://www.allrecipes.com/" target="_blank">AllRecipes</a></li>
+                    <li><a href="https://www.loveandlemons.com/" target="_blank">Love and Lemons</a></li>
+                    <li><a href="https://www.seriouseats.com/" target="_blank">Serious Eats</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 
+    <!-- Mobile Menu JS -->
     <script>
-        const navBurger = document.getElementById('navBurger');
-        const nav = document.getElementById('mainNav');
+        const navBurger = document.getElementById("navBurger");
+        const nav = document.getElementById("mainNav");
 
-        navBurger.addEventListener('click', () => {
-            nav.classList.toggle('show-menu');
+        navBurger.addEventListener("click", () => {
+            nav.classList.toggle("show-menu");
         });
     </script>
 
