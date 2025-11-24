@@ -1,66 +1,66 @@
-/* Top-level nav */
+/* Base nav styles */
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     background-color: #00796b;
     text-align: center;
-    padding: 0;
     border-radius: 6px;
 }
 
 nav > ul > li {
     display: inline-block;
-    position: relative; /* required for dropdown positioning */
+    position: relative; /* needed for dropdown positioning */
 }
 
 nav a {
     display: block;
-    padding: 10px 15px;
+    padding: 10px 20px;
     color: white;
     text-decoration: none;
 }
 
-/* Hover effect */
+/* Hover top-level links */
 nav li:hover > a {
     background-color: #004d40;
 }
 
 /* Dropdown menu */
-nav ul ul {
+.dropdown {
     display: none;           /* hidden by default */
-    position: absolute;      /* position below parent */
+    position: absolute;
     top: 100%;
     left: 0;
     background-color: #004d40;
-    border-radius: 5px;
     min-width: 160px;
-    opacity: 0;              /* start transparent for animation */
+    border-radius: 5px;
+    opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
 }
 
 /* Show dropdown on hover */
-nav li:hover > ul {
+.has-dropdown:hover .dropdown {
     display: block;
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Dropdown items */
-nav ul ul li {
+/* Dropdown links */
+.dropdown li {
     display: block;
 }
 
-nav ul ul a {
+.dropdown a {
     padding: 10px 15px;
-    color: white;
 }
 
-/* Hover for dropdown items */
-nav ul ul a:hover {
+.dropdown a:hover {
     background-color: #00695c;
 }
 
-/* Mobile menu (burger) */
+/* Mobile */
 @media screen and (max-width: 768px) {
     #navBurger {
         display: block;
@@ -70,7 +70,6 @@ nav ul ul a:hover {
         display: none;
         flex-direction: column;
         width: 100%;
-        margin-top: 10px;
     }
 
     nav.show-menu > ul {
@@ -81,9 +80,16 @@ nav ul ul a:hover {
         width: 100%;
     }
 
-    nav ul ul {
-        position: static; /* stack dropdown items on mobile */
+    /* Mobile dropdowns stack under parent */
+    .dropdown {
+        position: static;
         transform: translateY(0);
         opacity: 1;
+        display: none; /* hidden until parent is clicked */
+    }
+
+    /* Show dropdown when parent is clicked (JS will toggle .show-dropdown) */
+    .has-dropdown.show-dropdown .dropdown {
+        display: block;
     }
 }
