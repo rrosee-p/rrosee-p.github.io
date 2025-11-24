@@ -1,117 +1,179 @@
 /* ---------------------- */
-/* Navigation Styling     */
+/* Base & Fonts           */
 /* ---------------------- */
-#navBurger {
-    display: none;
-    font-size: 28px;
-    padding: 10px 15px;
-    cursor: pointer;
-    background-color: #00796b; /* teal */
-    color: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: background 0.3s, transform 0.2s;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#navBurger:hover {
-    background-color: #004d40;
-    transform: scale(1.1);
+body {
+  font-family: 'Verdana', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #ff7043;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Navigation */
+#navBurger {
+  display: none;
+  font-size: 28px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ff7043;
+  color: white;
+  border-radius: 8px;
 }
 
 nav ul {
-    list-style: none;
-    background-color: #00796b;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    text-align: center; /* center nav items */
+  list-style: none;
+  background-color: #ff5722;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
 }
 
 nav > ul > li {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 nav a {
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
-    border-radius: 8px;
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  border-radius: 5px;
 }
 
-nav a:hover {
-    background-color: #004d40;
-    transform: scale(1.05);
+nav li:hover > a {
+  background-color: #e64a19;
 }
 
-/* Submenu (Drop-Down) */
+/* Submenu / Drop-down */
 nav ul ul {
-    display: none; /* hidden by default */
-    position: absolute;
-    top: 100%; /* below parent menu */
-    left: 0;
-    background-color: #004d40;
-    border-radius: 8px;
-    min-width: 160px;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-nav ul ul li {
-    display: block;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e64a19;
+  border-radius: 5px;
+  min-width: 160px;
+  z-index: 1000;
 }
 
 nav li:hover > ul {
-    display: block; /* show on hover */
+  display: block;
+}
+
+nav ul ul li {
+  display: block;
 }
 
 nav ul ul a {
-    padding: 10px 15px;
-    text-align: left;
+  padding: 10px 15px;
 }
 
-nav ul ul a:hover {
-    background-color: #00695c; /* slightly lighter teal on hover */
-}
-
-/* ---------------------- */
-/* Responsive (Mobile)    */
-/* ---------------------- */
+/* Responsive */
 @media screen and (max-width: 768px) {
-    #navBurger {
-        display: block;
-    }
+  #navBurger {
+    display: block;
+  }
 
-    nav > ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-    }
+  nav > ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
 
-    nav.show-menu > ul {
-        display: flex;
-        animation: slideDown 0.3s ease;
-    }
+  nav.show-menu > ul {
+    display: flex;
+  }
 
-    nav > ul > li {
-        width: 100%;
-    }
+  nav > ul > li {
+    width: 100%;
+  }
 
-    nav ul ul {
-        position: static; /* stack submenu items on mobile */
-    }
-
-    nav ul ul a {
-        background-color: #004d40;
-    }
+  nav ul ul {
+    position: static;
+  }
 }
 
-/* Slide down animation for mobile menu */
-@keyframes slideDown {
-    0% { opacity: 0; transform: translateY(-10px); }
-    100% { opacity: 1; transform: translateY(0); }
+/* ---------------------- */
+/* Main Content           */
+/* ---------------------- */
+.intro {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 1.2rem;
+}
+
+/* Recipe Cards */
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.recipe-card {
+  background-color: #fff3e0;
+  border-radius: 12px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.recipe-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #ff7043;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.recipe-button:hover {
+  background-color: #e64a19;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px 0;
+  background-color: #ff7043;
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
