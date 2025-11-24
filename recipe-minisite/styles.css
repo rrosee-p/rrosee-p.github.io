@@ -1,25 +1,9 @@
-/* Dropdown list hidden by default */
-.has-dropdown .dropdown {
+/* Hide dropdowns by default */
+.dropdown {
     display: none;
-    padding-left: 20px;
-    margin-top: 5px;
 }
 
-/* Show dropdown when "open" class is added */
-.has-dropdown.open .dropdown {
+/* Show when parent has .open */
+.drop-section.open .dropdown {
     display: block;
-}
-
-/* Dropdown links */
-.dropdown li {
-    padding: 5px 0;
-}
-
-.drop-link {
-    cursor: pointer;
-    color: #333;
-}
-
-.drop-link:hover {
-    color: #ff6300;
 }
