@@ -1,4 +1,4 @@
-/* Basic page look */
+/* Basic page styles */
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -20,7 +20,7 @@ header h1 {
     letter-spacing: 1px;
 }
 
-/* Menu button */
+/* Mobile menu button */
 #menuBtn {
     position: absolute;
     right: 15px;
@@ -38,7 +38,7 @@ header h1 {
     background: #ffe1c2;
 }
 
-/* Navigation panel */
+/* Navigation menu */
 #navMenu {
     display: none;
     background: #fff3df;
@@ -46,23 +46,23 @@ header h1 {
     border-top: 2px solid #ffc17a;
 }
 
-/* When menu is open */
 #navMenu.open {
     display: block;
 }
 
-/* Remove list bullets */
+/* Remove bullets from lists */
 #navMenu ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-/* Main links */
+/* Top-level menu items */
 #navMenu > ul > li {
     padding: 12px 20px;
 }
 
+/* Links */
 #navMenu a {
     text-decoration: none;
     color: #5a3d1e;
@@ -71,19 +71,13 @@ header h1 {
     transition: 0.2s;
 }
 
-/* Hover color */
 #navMenu a:hover {
     color: #d35400;
 }
 
-/* DROPDOWN AREAS */
-.drop-section {
-    cursor: pointer;
-}
-
-/* Dropdown menus (hidden at first) */
+/* Dropdown menus */
 .dropdown {
-    display: none;
+    display: none; /* hide by default */
     padding-left: 25px;
     background: #fff0e0;
     border-left: 3px solid #ffb86b;
@@ -92,13 +86,12 @@ header h1 {
     border-radius: 4px;
 }
 
-/* Show dropdown when parent has "open" */
-.drop-section.open .dropdown {
+/* Show dropdown when toggled */
+.dropdown.open {
     display: block;
     animation: fadeIn 0.25s ease-in-out;
 }
 
-/* Dropdown link style */
 .dropdown li {
     padding: 8px 0;
 }
@@ -107,7 +100,7 @@ header h1 {
     font-size: 16px;
 }
 
-/* Little animation */
+/* Fade-in animation for dropdown */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-4px); }
     to { opacity: 1; transform: translateY(0); }

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Recipe Page</title>
 
+    <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Link to external JS -->
+    <script src="scripts.js" defer></script>
 </head>
 
 <body>
@@ -17,10 +20,11 @@
 
         <nav id="navMenu">
             <ul>
+                <!-- Home link -->
                 <li><a href="index.html">Home</a></li>
 
-                <!-- RECIPES DROPDOWN -->
-                <li class="drop-section">
+                <!-- Recipes dropdown -->
+                <li>
                     <a href="#" class="drop-toggle">Recipes ▼</a>
                     <ul class="dropdown">
                         <li><a href="recipe1.html">Banana Bread</a></li>
@@ -29,8 +33,8 @@
                     </ul>
                 </li>
 
-                <!-- RECIPE WEBSITES DROPDOWN -->
-                <li class="drop-section">
+                <!-- Recipe Websites dropdown -->
+                <li>
                     <a href="#" class="drop-toggle">Recipe Websites ▼</a>
                     <ul class="dropdown">
                         <li><a href="https://www.allrecipes.com" target="_blank">AllRecipes</a></li>
@@ -41,25 +45,6 @@
             </ul>
         </nav>
     </header>
-
-
-    <script>
-        // Mobile menu toggle
-        const btn = document.getElementById("menuBtn");
-        const menu = document.getElementById("navMenu");
-        btn.onclick = () => menu.classList.toggle("open");
-
-        // Dropdown toggles
-        const drops = document.querySelectorAll(".drop-toggle");
-
-        drops.forEach(drop => {
-            drop.addEventListener("click", function (e) {
-                e.preventDefault();
-                const parent = this.parentElement;
-                parent.classList.toggle("open");
-            });
-        });
-    </script>
 
 </body>
 

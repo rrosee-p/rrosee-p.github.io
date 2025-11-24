@@ -1,29 +1,19 @@
-// Toggle the mobile menu
-const btn = document.getElementById("menuBtn");
-const menu = document.getElementById("navMenu");
+// Toggle mobile menu
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
 
-btn.onclick = function () {
-    menu.classList.toggle("open");
-};
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+});
 
-
-// Handle dropdowns for Recipes + Recipe Websites
+// Toggle dropdowns for "Recipes" and "Recipe Websites"
 const dropToggles = document.querySelectorAll(".drop-toggle");
 
 dropToggles.forEach(toggle => {
-    toggle.addEventListener("click", function (event) {
-        event.preventDefault(); // prevents page jumping
+    toggle.addEventListener("click", function(event) {
+        event.preventDefault(); // prevent page jump
 
-        const section = this.parentElement;
-
-        // Close other dropdowns when one is opened (optional but nicer)
-        document.querySelectorAll(".drop-section").forEach(s => {
-            if (s !== section) {
-                s.classList.remove("open");
-            }
-        });
-
-        // Toggle the clicked dropdown
-        section.classList.toggle("open");
+        const dropdown = this.nextElementSibling;
+        dropdown.classList.toggle("open"); // open/close this dropdown
     });
 });
