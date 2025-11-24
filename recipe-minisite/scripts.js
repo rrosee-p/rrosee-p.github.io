@@ -7,13 +7,23 @@ btn.onclick = function () {
 };
 
 
-// Dropdown toggle for "Recipes" and "Recipe Websites"
+// Handle dropdowns for Recipes + Recipe Websites
 const dropToggles = document.querySelectorAll(".drop-toggle");
 
 dropToggles.forEach(toggle => {
     toggle.addEventListener("click", function (event) {
-        event.preventDefault(); // stop page jump
-        const section = this.parentElement; // li element
-        section.classList.toggle("open");   // open/close dropdown
+        event.preventDefault(); // prevents page jumping
+
+        const section = this.parentElement;
+
+        // Close other dropdowns when one is opened (optional but nicer)
+        document.querySelectorAll(".drop-section").forEach(s => {
+            if (s !== section) {
+                s.classList.remove("open");
+            }
+        });
+
+        // Toggle the clicked dropdown
+        section.classList.toggle("open");
     });
 });
