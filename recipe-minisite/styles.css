@@ -8,7 +8,7 @@
     cursor: pointer;
     background-color: #00796b; /* teal */
     color: white;
-    border-radius: 12px; /* more rounded */
+    border-radius: 12px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: background 0.3s, transform 0.2s;
 }
@@ -19,11 +19,12 @@
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     background-color: #00796b;
-    border-radius: 12px; /* rounded nav bar */
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center; /* center nav items */
 }
 
 nav > ul > li {
@@ -38,34 +39,47 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
-    border-radius: 8px; /* rounded buttons */
+    border-radius: 8px;
 }
 
 nav a:hover {
     background-color: #004d40;
-    transform: scale(1.05); /* subtle hover zoom */
+    transform: scale(1.05);
 }
 
-/* Submenu */
+/* Submenu (Drop-Down) */
 nav ul ul {
-    display: none;
+    display: none; /* hidden by default */
     position: absolute;
+    top: 100%; /* below parent menu */
+    left: 0;
     background-color: #004d40;
     border-radius: 8px;
     min-width: 160px;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-nav li:hover > ul {
-    display: block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 nav ul ul li {
     display: block;
 }
 
-/* Responsive */
+nav li:hover > ul {
+    display: block; /* show on hover */
+}
+
+nav ul ul a {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+nav ul ul a:hover {
+    background-color: #00695c; /* slightly lighter teal on hover */
+}
+
+/* ---------------------- */
+/* Responsive (Mobile)    */
+/* ---------------------- */
 @media screen and (max-width: 768px) {
     #navBurger {
         display: block;
@@ -76,7 +90,6 @@ nav ul ul li {
         flex-direction: column;
         width: 100%;
         margin-top: 10px;
-        border-radius: 12px;
     }
 
     nav.show-menu > ul {
@@ -89,10 +102,10 @@ nav ul ul li {
     }
 
     nav ul ul {
-        position: static;
+        position: static; /* stack submenu items on mobile */
     }
 
-    nav ul ul li a {
+    nav ul ul a {
         background-color: #004d40;
     }
 }
