@@ -1,24 +1,25 @@
-/* Drop-down button style */
-.dropBtn {
-    background-color: #ffd28a;
-    border: none;
-    padding: 8px 12px;
-    font-size: 16px;
-    width: 90%;
-    text-align: left;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
-/* List stays hidden until opened */
-.dropdownList {
+/* Dropdown list hidden by default */
+.has-dropdown .dropdown {
     display: none;
     padding-left: 20px;
     margin-top: 5px;
 }
 
-/* When visible */
-.dropdownList.show {
+/* Show dropdown when "open" class is added */
+.has-dropdown.open .dropdown {
     display: block;
+}
+
+/* Dropdown links */
+.dropdown li {
+    padding: 5px 0;
+}
+
+.drop-link {
+    cursor: pointer;
+    color: #333;
+}
+
+.drop-link:hover {
+    color: #ff6300;
 }

@@ -1,9 +1,10 @@
-// Dropdown buttons for the recipe lists
-const dropdownButtons = document.querySelectorAll(".dropBtn");
+// Handle dropdowns for both sections
+const dropdownLinks = document.querySelectorAll(".drop-link");
 
-dropdownButtons.forEach(button => {
-    button.addEventListener("click", function () {
-        const list = this.nextElementSibling;
-        list.classList.toggle("show");
+dropdownLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent page jump
+        const parent = this.parentElement;
+        parent.classList.toggle("open");
     });
 });
