@@ -1,10 +1,9 @@
-// This script opens and closes the navigation menu
+// Dropdown buttons for the recipe lists
+const dropdownButtons = document.querySelectorAll(".dropBtn");
 
-// Get the button and the menu
-const menuButton = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
-
-// When the button is clicked, show or hide the menu
-menuButton.addEventListener("click", function () {
-    navMenu.classList.toggle("open");
+dropdownButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        const list = this.nextElementSibling;
+        list.classList.toggle("show");
+    });
 });

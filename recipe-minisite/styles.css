@@ -1,78 +1,24 @@
-/* Basic page setup */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
-}
-
-/* Header area */
-header {
-    background-color: #ffcf87;
-    padding: 15px;
-    text-align: center;
-    position: relative;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-/* Button for mobile menu */
-#menuBtn {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    background-color: #ffae42;
+/* Drop-down button style */
+.dropBtn {
+    background-color: #ffd28a;
     border: none;
     padding: 8px 12px;
     font-size: 16px;
+    width: 90%;
+    text-align: left;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 5px;
 }
 
-/* Navigation menu (hidden at first) */
-#navMenu {
+/* List stays hidden until opened */
+.dropdownList {
     display: none;
-    background-color: #ffe4b5;
-    padding: 10px 0;
-}
-
-/* When menu is opened */
-#navMenu.open {
-    display: block;
-}
-
-/* Main navigation list */
-#navMenu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Top-level links */
-#navMenu ul > li {
-    padding: 10px 0;
-}
-
-/* Link styling */
-#navMenu a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-}
-
-/* Dropdown styling */
-.dropdown {
     padding-left: 20px;
     margin-top: 5px;
 }
 
-.dropdown li {
-    padding: 5px 0;
-}
-
-/* Hover color */
-#navMenu a:hover {
-    color: #ff6300;
+/* When visible */
+.dropdownList.show {
+    display: block;
 }
