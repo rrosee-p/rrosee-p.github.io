@@ -1,82 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rose's Recipe Minisite</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* in-file CSS here */
+    </style>
+
+    <!-- external and internal JavaScript -->
+    <script src="scripts.js" defer></script>
+    <script>
+        // in-page JavaScript here
+    </script>
+
 </head>
-<body class="page-home">
 
-  <!-- NAV (use this same nav block at top of every page) -->
-  <nav class="site-nav" aria-label="Main navigation">
-    <button id="burgerBtn" class="burger" aria-expanded="false" aria-controls="mainMenu">☰</button>
-    <ul id="mainMenu" class="nav-list">
-      <li class="nav-item"><a href="index.html">Home</a></li>
+<body class="home">
+    <nav id="mainNav">
+        <a id="navBurger">&#9776;</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
 
-      <li class="nav-item has-sub">
-        <button class="sub-toggle" aria-expanded="false">My Recipes ▾</button>
-        <ul class="sub-list">
-          <li><a href="recipe1.html">Spanish Rice</a></li>
-          <li><a href="recipe2.html">French Toast</a></li>
-          <li><a href="recipe3.html">Homemade Brownies</a></li>
+            <li><a href="#">My Recipes</a>
+                <ul>
+                    <li><a href="recipe1.html">Banana Bread</a></li>
+                    <li><a href="recipe2.html">Cucumber Salad</a></li>
+                    <li><a href="recipe3.html">Peanut Butter Cookies</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Favorite Recipe Sites</a>
+                <ul>
+                    <li><a href="https://www.allrecipes.com" target="_blank">AllRecipes</a></li>
+                    <li><a href="https://www.loveandlemons.com" target="_blank">Love and Lemons</a></li>
+                    <li><a href="https://www.seriouseats.com" target="_blank">Serious Eats</a></li>
+                </ul>
+            </li>
         </ul>
-      </li>
+    </nav>
 
-      <li class="nav-item has-sub">
-        <button class="sub-toggle" aria-expanded="false">Favorite Recipe Sites ▾</button>
-        <ul class="sub-list">
-          <li><a href="https://www.allrecipes.com/" target="_blank" rel="noopener">AllRecipes</a></li>
-          <li><a href="https://www.loveandlemons.com/" target="_blank" rel="noopener">Love &amp; Lemons</a></li>
-          <li><a href="https://www.seriouseats.com/" target="_blank" rel="noopener">Serious Eats</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-  <!-- /NAV -->
+    <script>
+        const navBurger = document.getElementById('navBurger');
+        const nav = document.getElementById('mainNav');
 
-  <header class="hero">
-    <div class="hero-inner">
-      <h1>Simple Recipes, Big Flavor</h1>
-      <p class="lead">Three family favorites — easy, tasty, and great for sharing.</p>
-      <a class="cta" href="recipe1.html">Try Spanish Rice</a>
-    </div>
-  </header>
+        navBurger.addEventListener('click', () => {
+            nav.classList.toggle('show-menu');
+        });
+    </script>
 
-  <main class="container">
-    <section class="cards">
-      <article class="card">
-        <img src="images/spanish-rice.jpg" alt="Plate of Spanish rice">
-        <h2>Spanish Rice</h2>
-        <p>Toasty rice cooked with tomato paste and warm seasonings.</p>
-        <a class="link" href="recipe1.html">View Recipe →</a>
-      </article>
-
-      <article class="card">
-        <img src="images/french-toast.jpg" alt="French toast with strawberries">
-        <h2>French Toast</h2>
-        <p>Fluffy, cinnamon-kissed slices topped with berries and syrup.</p>
-        <a class="link" href="recipe2.html">View Recipe →</a>
-      </article>
-
-      <article class="card">
-        <img src="images/brownies.jpg" alt="Homemade brownies">
-        <h2>Homemade Brownies</h2>
-        <p>Fudgy squares with optional walnuts — quick and satisfying.</p>
-        <a class="link" href="recipe3.html">View Recipe →</a>
-      </article>
-    </section>
-
-    <section class="about">
-      <h2>About this mini-site</h2>
-      <p>This is a responsive, mobile-first recipe mini-site with a simple navigation and three recipes. Built for the class Tiny Project.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© Rose Pineda — Recipe Minisite</p>
-  </footer>
 
 </body>
+
 </html>
