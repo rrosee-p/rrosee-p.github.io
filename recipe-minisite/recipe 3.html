@@ -3,42 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Homemade Brownies — Rose</title>
+  <title>Homemade Brownies</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
-</head>
-<body class="page-recipe">
 
-  <!-- NAV -->
-  <nav class="site-nav" aria-label="Main navigation">
-    <button id="burgerBtn" class="burger" aria-expanded="false" aria-controls="mainMenu">☰</button>
-    <ul id="mainMenu" class="nav-list">
-      <li class="nav-item"><a href="index.html">Home</a></li>
-      <li class="nav-item has-sub">
-        <button class="sub-toggle" aria-expanded="false">My Recipes ▾</button>
-        <ul class="sub-list">
-          <li><a href="recipe1.html">Spanish Rice</a></li>
-          <li><a href="recipe2.html">French Toast</a></li>
-          <li><a href="recipe3.html">Homemade Brownies</a></li>
-        </ul>
-      </li>
-      <li class="nav-item has-sub">
-        <button class="sub-toggle" aria-expanded="false">Favorite Recipe Sites ▾</button>
-        <ul class="sub-list">
-          <li><a href="https://www.allrecipes.com/" target="_blank" rel="noopener">AllRecipes</a></li>
-          <li><a href="https://www.loveandlemons.com/" target="_blank" rel="noopener">Love &amp; Lemons</a></li>
-          <li><a href="https://www.seriouseats.com/" target="_blank" rel="noopener">Serious Eats</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-  <!-- /NAV -->
+  <style>
+    /* ---------------------- */
+    /* Base & Fonts           */
+    /* ---------------------- */
+    body {
+      font-family: 'Verdana', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ---------------------- */
+    /* Header                 */
+    /* ---------------------- */
+    .recipe-header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: #795548; /* chocolate tone */
+      color: white;
+    }
+
+    .recipe-header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .recipe-header p.sub {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .recipe-header img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* ---------------------- */
+    /* Recipe Sections        */
+    /* ---------------------- */
+    .recipe-grid {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      gap: 20px;
+    }
+
+    .ingredients,
+    .directions {
+      background-color: #efebe9; /* light chocolate-beige */
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      flex: 1 1 300px;
+    }
+
+    .ingredients h2,
+    .directions h2 {
+      color: #795548;
+      margin-bottom: 15px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    /* ---------------------- */
+    /* Footer                 */
+    /* ---------------------- */
+    .recipe-footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #795548;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .recipe-footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* ---------------------- */
+    /* Responsive             */
+    /* ---------------------- */
+    @media screen and (max-width: 768px) {
+      .recipe-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
 
   <main class="container recipe-page">
+
     <header class="recipe-header">
       <h1>Homemade Brownies</h1>
       <p class="sub">Fudgy brownies with optional walnuts — simple and delicious.</p>
-      <img src="images/brownies.jpg" alt="Homemade brownies" class="recipe-hero">
+      <img src="images/brownies.jpg" alt="Homemade brownies">
     </header>
 
     <section class="recipe-grid">
@@ -72,6 +151,7 @@
     <footer class="recipe-footer">
       <p>© Rose Pineda. Photo credit: Michelle Tsang on Unsplash.</p>
     </footer>
+
   </main>
 
 </body>
