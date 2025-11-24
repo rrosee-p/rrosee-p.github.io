@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
-    background-image: img src="Background Image.jpg"
+     background-image: url('Background Image.jpg'); /* path to your image */
 }
 
 /* Nav */
