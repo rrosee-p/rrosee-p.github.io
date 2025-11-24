@@ -6,26 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Recipe Page</title>
 
-    <!-- Link to external CSS -->
+    <!-- Simple external file links -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Link to external JS -->
-    <script src="scripts.js" defer></script>
 </head>
 
 <body>
 
+    <!-- Simple Navigation Bar -->
     <header>
         <h1>My Recipe Collection</h1>
         <button id="menuBtn">Menu ☰</button>
 
         <nav id="navMenu">
             <ul>
-                <!-- Home link -->
                 <li><a href="index.html">Home</a></li>
 
-                <!-- Recipes dropdown -->
                 <li>
-                    <a href="#" class="drop-toggle">Recipes ▼</a>
+                    <a href="#">Recipes ▼</a>
                     <ul class="dropdown">
                         <li><a href="recipe1.html">Banana Bread</a></li>
                         <li><a href="recipe2.html">Cucumber Salad</a></li>
@@ -33,9 +30,8 @@
                     </ul>
                 </li>
 
-                <!-- Recipe Websites dropdown -->
                 <li>
-                    <a href="#" class="drop-toggle">Recipe Websites ▼</a>
+                    <a href="#">Recipe Websites ▼</a>
                     <ul class="dropdown">
                         <li><a href="https://www.allrecipes.com" target="_blank">AllRecipes</a></li>
                         <li><a href="https://www.loveandlemons.com" target="_blank">Love and Lemons</a></li>
@@ -45,6 +41,17 @@
             </ul>
         </nav>
     </header>
+
+
+    <!-- Very simple JS to open the menu -->
+    <script>
+        const btn = document.getElementById("menuBtn");
+        const menu = document.getElementById("navMenu");
+
+        btn.onclick = function () {
+            menu.classList.toggle("open");
+        };
+    </script>
 
 </body>
 

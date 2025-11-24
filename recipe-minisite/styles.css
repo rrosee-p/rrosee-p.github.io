@@ -1,107 +1,78 @@
-/* Basic page styles */
+/* Basic page setup */
 body {
     margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #fff8ef;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
 }
 
-/* Header */
+/* Header area */
 header {
-    background: linear-gradient(90deg, #ffb46a, #ffa74b);
+    background-color: #ffcf87;
     padding: 15px;
     text-align: center;
     position: relative;
-    color: white;
 }
 
 header h1 {
     margin: 0;
-    font-size: 28px;
-    letter-spacing: 1px;
+    font-size: 24px;
 }
 
-/* Mobile menu button */
+/* Button for mobile menu */
 #menuBtn {
     position: absolute;
     right: 15px;
     top: 15px;
-    background: white;
+    background-color: #ffae42;
     border: none;
     padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
     font-size: 16px;
-    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-#menuBtn:hover {
-    background: #ffe1c2;
-}
-
-/* Navigation menu */
+/* Navigation menu (hidden at first) */
 #navMenu {
     display: none;
-    background: #fff3df;
+    background-color: #ffe4b5;
     padding: 10px 0;
-    border-top: 2px solid #ffc17a;
 }
 
+/* When menu is opened */
 #navMenu.open {
     display: block;
 }
 
-/* Remove bullets from lists */
+/* Main navigation list */
 #navMenu ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Top-level menu items */
-#navMenu > ul > li {
-    padding: 12px 20px;
+/* Top-level links */
+#navMenu ul > li {
+    padding: 10px 0;
 }
 
-/* Links */
+/* Link styling */
 #navMenu a {
     text-decoration: none;
-    color: #5a3d1e;
-    font-size: 18px;
-    font-weight: 500;
-    transition: 0.2s;
-}
-
-#navMenu a:hover {
-    color: #d35400;
-}
-
-/* Dropdown menus */
-.dropdown {
-    display: none; /* hide by default */
-    padding-left: 25px;
-    background: #fff0e0;
-    border-left: 3px solid #ffb86b;
-    margin-top: 8px;
-    margin-bottom: 5px;
-    border-radius: 4px;
-}
-
-/* Show dropdown when toggled */
-.dropdown.open {
-    display: block;
-    animation: fadeIn 0.25s ease-in-out;
-}
-
-.dropdown li {
-    padding: 8px 0;
-}
-
-.dropdown a {
+    color: #333;
     font-size: 16px;
 }
 
-/* Fade-in animation for dropdown */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-4px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Dropdown styling */
+.dropdown {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.dropdown li {
+    padding: 5px 0;
+}
+
+/* Hover color */
+#navMenu a:hover {
+    color: #ff6300;
 }
