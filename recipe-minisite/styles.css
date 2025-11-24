@@ -1,16 +1,22 @@
-/* Base nav styles */
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    background-color: #f0f8ff;
+}
+
+/* Nav */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     background-color: #00796b;
-    text-align: center;
     border-radius: 6px;
 }
 
 nav > ul > li {
     display: inline-block;
-    position: relative; /* needed for dropdown positioning */
+    position: relative;
 }
 
 nav a {
@@ -25,29 +31,21 @@ nav li:hover > a {
     background-color: #004d40;
 }
 
-/* Dropdown menu */
+/* Dropdown */
 .dropdown {
-    display: none;           /* hidden by default */
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #004d40;
     min-width: 160px;
+    display: none;  /* hidden by default */
     border-radius: 5px;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1000;
 }
 
-/* Show dropdown on hover */
 .has-dropdown:hover .dropdown {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+    display: block; /* show on hover */
 }
 
-/* Dropdown links */
 .dropdown li {
     display: block;
 }
@@ -61,6 +59,16 @@ nav li:hover > a {
 }
 
 /* Mobile */
+#navBurger {
+    display: none;
+    font-size: 28px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #00695c;
+    color: white;
+    border-radius: 6px;
+}
+
 @media screen and (max-width: 768px) {
     #navBurger {
         display: block;
@@ -69,7 +77,6 @@ nav li:hover > a {
     nav > ul {
         display: none;
         flex-direction: column;
-        width: 100%;
     }
 
     nav.show-menu > ul {
@@ -77,18 +84,15 @@ nav li:hover > a {
     }
 
     nav > ul > li {
+        display: block;
         width: 100%;
     }
 
-    /* Mobile dropdowns stack under parent */
     .dropdown {
         position: static;
-        transform: translateY(0);
-        opacity: 1;
-        display: none; /* hidden until parent is clicked */
+        display: none;
     }
 
-    /* Show dropdown when parent is clicked (JS will toggle .show-dropdown) */
     .has-dropdown.show-dropdown .dropdown {
         display: block;
     }

@@ -8,12 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.toggle('show-menu');
     });
 
-    // Toggle dropdowns on mobile
+    // Toggle mobile dropdowns
     dropdownParents.forEach(parent => {
         parent.addEventListener('click', function (e) {
-            // Only on mobile
             if (window.innerWidth <= 768) {
-                e.stopPropagation(); // prevent closing menu
+                e.stopPropagation();
                 parent.classList.toggle('show-dropdown');
             }
         });
