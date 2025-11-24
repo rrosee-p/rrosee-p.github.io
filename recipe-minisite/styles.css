@@ -2,14 +2,7 @@
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
-}
-
-/* Only added background for homepage */
-body.home {
-    background-image: url('images/Background Image.jpg'); /* put your image in this path */
-    background-size: cover;       /* cover the whole page */
-    background-position: center;  /* center the image */
-    background-repeat: no-repeat; /* no tiling */
+     background-image: url('Background Image.jpg'); /* path to your image */
 }
 
 /* Nav */
