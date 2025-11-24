@@ -1,33 +1,15 @@
-/* Base Styles */
-body {
-    margin: 0;
-    font-family: 'Verdana', sans-serif; /* changed font */
-    padding: 20px;
-    background-color: #f0f8ff; /* light blue background */
-}
-
-/* Navigation */
-#navBurger {
-    display: none;
-    font-size: 28px;
-    padding: 10px;
-    cursor: pointer;
-    background-color: #00695c; /* teal instead of gray */
-    color: white;
-    border-radius: 6px; /* subtle rounding */
-}
-
 /* Top-level nav */
 nav ul {
-    list-style-type: none;
-    background-color: #00796b; /* teal/nav color */
+    list-style: none;
+    background-color: #00796b;
+    text-align: center;
+    padding: 0;
     border-radius: 6px;
-    overflow: hidden;
 }
 
 nav > ul > li {
     display: inline-block;
-    position: relative;
+    position: relative; /* required for dropdown positioning */
 }
 
 nav a {
@@ -35,33 +17,50 @@ nav a {
     padding: 10px 15px;
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
 }
 
+/* Hover effect */
 nav li:hover > a {
-    background-color: #004d40; /* hover darker teal */
-}
-
-/* Submenu */
-nav ul ul {
-    display: none;
-    position: absolute;
     background-color: #004d40;
-    min-width: 160px;
-    border-radius: 5px;
-    z-index: 1000;
 }
 
+/* Dropdown menu */
+nav ul ul {
+    display: none;           /* hidden by default */
+    position: absolute;      /* position below parent */
+    top: 100%;
+    left: 0;
+    background-color: #004d40;
+    border-radius: 5px;
+    min-width: 160px;
+    opacity: 0;              /* start transparent for animation */
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show dropdown on hover */
 nav li:hover > ul {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
+/* Dropdown items */
 nav ul ul li {
     display: block;
 }
 
-/* Responsive */
+nav ul ul a {
+    padding: 10px 15px;
+    color: white;
+}
+
+/* Hover for dropdown items */
+nav ul ul a:hover {
+    background-color: #00695c;
+}
+
+/* Mobile menu (burger) */
 @media screen and (max-width: 768px) {
     #navBurger {
         display: block;
@@ -71,6 +70,7 @@ nav ul ul li {
         display: none;
         flex-direction: column;
         width: 100%;
+        margin-top: 10px;
     }
 
     nav.show-menu > ul {
@@ -82,10 +82,8 @@ nav ul ul li {
     }
 
     nav ul ul {
-        position: static;
-    }
-
-    nav ul ul li a {
-        background-color: #004d40;
+        position: static; /* stack dropdown items on mobile */
+        transform: translateY(0);
+        opacity: 1;
     }
 }
