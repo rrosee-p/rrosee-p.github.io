@@ -2,56 +2,59 @@
 <html>
 
 <head>
+
+    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Recipe Page</title>
+    <title>Page Title</title>
 
-    <!-- Simple external file links -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* in-file CSS here */
+    </style>
+
+    <!-- external and internal JavaScript -->
+    <script src="scripts.js" defer></script>
+    <script>
+        // in-page JavaScript here
+    </script>
+
 </head>
 
-<body>
+<body class="home">
+    <nav id="mainNav">
+        <a id="navBurger">&#9776;</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
 
-    <!-- Simple Navigation Bar -->
-    <header>
-        <h1>My Recipe Collection</h1>
-        <button id="menuBtn">Menu ☰</button>
+            <li><a href="#">My Recipes</a>
+                <ul>
+                    <li><a href="recipe1.html">Banana Bread</a></li>
+                    <li><a href="recipe2.html">Cucumber Salad</a></li>
+                    <li><a href="recipe3.html">Peanut Butter Cookies</a></li>
+                </ul>
+            </li>
 
-        <nav id="navMenu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
+            <li><a href="#">Favorite Recipe Sites</a>
+                <ul>
+                    <li><a href="https://www.allrecipes.com" target="_blank">AllRecipes</a></li>
+                    <li><a href="https://www.loveandlemons.com" target="_blank">Love and Lemons</a></li>
+                    <li><a href="https://www.seriouseats.com" target="_blank">Serious Eats</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-                <li>
-                    <a href="#">Recipes ▼</a>
-                    <ul class="dropdown">
-                        <li><a href="recipe1.html">Banana Bread</a></li>
-                        <li><a href="recipe2.html">Cucumber Salad</a></li>
-                        <li><a href="recipe3.html">Peanut Butter Cookies</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#">Recipe Websites ▼</a>
-                    <ul class="dropdown">
-                        <li><a href="https://www.allrecipes.com" target="_blank">AllRecipes</a></li>
-                        <li><a href="https://www.loveandlemons.com" target="_blank">Love and Lemons</a></li>
-                        <li><a href="https://www.seriouseats.com" target="_blank">Serious Eats</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <!-- Very simple JS to open the menu -->
     <script>
-        const btn = document.getElementById("menuBtn");
-        const menu = document.getElementById("navMenu");
+        const navBurger = document.getElementById('navBurger');
+        const nav = document.getElementById('mainNav');
 
-        btn.onclick = function () {
-            menu.classList.toggle("open");
-        };
+        navBurger.addEventListener('click', () => {
+            nav.classList.toggle('show-menu');
+        });
     </script>
+
 
 </body>
 
