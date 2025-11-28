@@ -36,7 +36,8 @@
     transition: color 0.3s;
 }
 
-.navbar .nav-links a:hover {
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
     color: #ff6b81;
 }
 
@@ -73,6 +74,7 @@
     display: none;
     width: 100%;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Mission Section */
@@ -104,3 +106,4 @@ footer {
         gap: 1rem;
     }
 }
+
