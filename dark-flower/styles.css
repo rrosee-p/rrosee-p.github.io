@@ -1,6 +1,6 @@
-/* BASE MOBILE FIRST */
+/*mobile-first design for Pacific Rhododendron layout */
 
-* {
+*{
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
@@ -8,22 +8,17 @@
 body {
     padding: 0;
     margin: 0;
-    background: white;
-    color: black;
 }
-
-/* -------- HEADER -------- */
 
 header {
     width: 100vw;
     height: 100vh;
-    position: relative;
 }
 
 #rhodiePicture {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-image: url("Pacific Rhododendron 1 - Walter Siegmund.jpeg");
     background-size: cover;
     background-position: center center;
@@ -31,71 +26,21 @@ header {
 
 #rhodieTitle {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;  
 }
 
-#rhodieTitle h1 {
+#rhodieTitle h1{
     position: absolute;
     bottom: 0;
     left: 1em;
     color: white;
     font-size: 2.5em;
-}
-
-/* -------- MAIN CONTENT -------- */
-
-main {
-    padding: 20px;
-}
-
-section {
-    font-size: 1.2em;
-    line-height: 1.6;
+    width: calc(100vw-2em);
 }
 
 
-/* DARK MODE BUTTON */
-#darkModeToggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #333;
-    color: #fff;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    z-index: 10000;
-    font-size: 16px;
-}
-
-#darkModeToggle:hover {
-    background: #555;
-}
-
-
-/* DARK MODE */
-
-body.dark-mode {
-    background-color: #111;
-    color: #eee;
-}
-
-body.dark-mode #rhodieTitle h1 {
-    color: #eee;
-}
-
-body.dark-mode section {
-    color: #ddd;
-}
-
-body.dark-mode #rhodiePicture {
-    filter: brightness(0.7);
-}
-
-
-/* -------- LANDSCAPE LAYOUT -------- */
+/* PUT THE REST OF THE MOBILE BASELINE LAYOUT HERE */
 
 @media screen and (orientation: landscape) {
 
@@ -106,10 +51,45 @@ body.dark-mode #rhodiePicture {
     #rhodieTitle {
         width: 50vw;
         left: 50vw;
-        background: rgba(0, 0, 0, 0.4);
+        background-color: #333;
     }
 
     #rhodieTitle h1 {
         width: 45vw;
     }
+    
+    /* REST OF THE DESKTOP LAYOUT HERE */
+
+}
+
+
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+body.dark-mode {
+    background-color: #111;
+    color: #eee;
+}
+
+body.dark-mode #rhodieTitle h1 {
+    color: #eee;
+}
+
+body.dark-mode main section {
+    color: #eee;
+}
+
+body.dark-mode #rhodiePicture {
+    filter: brightness(0.7);
 }

@@ -1,17 +1,14 @@
-// DARK MODE TOGGLE - WORKING VERSION
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const button = document.getElementById("darkModeToggle");
+    const btn = document.getElementById("darkModeToggle");
     const body = document.body;
 
-    // Load saved theme
+    // load saved mode
     if (localStorage.getItem("dark-mode") === "enabled") {
         body.classList.add("dark-mode");
     }
 
-    // Toggle theme on click
-    button.addEventListener("click", function () {
+    btn.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
 
         if (body.classList.contains("dark-mode")) {
