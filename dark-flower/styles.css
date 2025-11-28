@@ -1,11 +1,60 @@
-/* ⭐ BEGIN: COPY YOUR ORIGINAL CSS HERE ⭐ */
+/* mobile-first design for Pacific Rhododendron layout */
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: white;
+    color: black;
+}
+
+/* HEADER LAYOUT */
+header {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#rhodiePicture {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("Pacific Rhododendron 1 - Walter Siegmund.jpeg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#rhodieTitle {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;  
+}
+
+#rhodieTitle h1 {
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    color: white;
+    font-size: 2.5em;
+    width: calc(100vw - 2em);
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 20px;
+}
+
+section {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
 
 
-
-/* ⭐ END ORIGINAL CSS ⭐ */
-
-
-/* ---- DARK MODE BUTTON STYLE ---- */
+/* ⭐ DARK MODE BUTTON ⭐ */
 #darkModeToggle {
     position: fixed;
     top: 20px;
@@ -25,30 +74,43 @@
 }
 
 
-/* ---- DARK MODE THEME ---- */
+/* ⭐ DARK MODE THEME ⭐ */
 body.dark-mode {
     background-color: #111;
     color: #eee;
 }
 
-body.dark-mode header,
-body.dark-mode main,
-body.dark-mode section,
-body.dark-mode footer {
-    background-color: #222;
+body.dark-mode #rhodieTitle h1 {
     color: #eee;
 }
 
-/* If you have cards or boxes */
-body.dark-mode .card {
-    background-color: #1a1a1a;
-    border-color: #444;
+body.dark-mode section {
+    color: #ddd;
 }
 
-/* If you used images with backgrounds */
-body.dark-mode img {
-    filter: brightness(0.9) contrast(1.1);
+body.dark-mode #rhodieTitle {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode #rhodiePicture {
+    filter: brightness(0.7) contrast(1.2);
 }
 
 
-/* Responsive rules remain the same — only add dark-mode variants if needed */
+/* RESPONSIVE LANDSCAPE MODE */
+@media screen and (orientation: landscape) {
+
+    #rhodiePicture {
+        width: 50vw;
+    }
+
+    #rhodieTitle {
+        width: 50vw;
+        left: 50vw;
+        background-color: #333;
+    }
+
+    #rhodieTitle h1 {
+        width: 45vw;
+    }
+}

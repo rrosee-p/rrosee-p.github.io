@@ -1,9 +1,9 @@
-// DARK MODE TOGGLE SCRIPT FROM DEMO
+// DARK MODE TOGGLE SCRIPT
 document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.getElementById("darkModeToggle");
     const body = document.body;
 
-    // Load saved mode from localStorage
+    // Load saved user preference
     if (localStorage.getItem("dark-mode") === "enabled") {
         body.classList.add("dark-mode");
     }
