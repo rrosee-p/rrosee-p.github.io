@@ -1,6 +1,6 @@
-// DARK MODE TOGGLE SCRIPT
+// DARK MODE BUTTON SCRIPT
 document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById("darkModeToggle");
+    const darkmodeButton = document.getElementById("darkModebutton");
     const body = document.body;
 
     // Load saved user preference
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         body.classList.add("dark-mode");
     }
 
-    toggleButton.addEventListener("click", () => {
+    darkmodeButton.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
 
         if (body.classList.contains("dark-mode")) {
