@@ -13,6 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlide(index);
     }
 
-    showSlide(index); // Show the first slide initially
-    setInterval(nextSlide, 4000); // Change slide every 4 seconds
+    // Show first slide
+    showSlide(index);
+
+    // Change slide every 4 seconds
+    setInterval(() => {
+        nextSlide();
+        slides[index].classList.add("fade"); // add fade animation each time
+    }, 4000);
 });
+

@@ -107,3 +107,29 @@ footer {
     }
 }
 
+/* Slideshow Fade */
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin-top: 2rem;
+}
+
+.slide {
+    width: 100%;
+    border-radius: 10px;
+    display: none; /* hide all slides initially */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fade {
+    animation-name: fadeEffect;
+    animation-duration: 1s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
