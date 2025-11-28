@@ -39,6 +39,18 @@ header {
     width: calc(100vw-2em);
 }
 
+#toggleDarkMode {
+    margin-top: 2em;
+}
+
+body.darkMode {
+    background-color: black;
+    color: white;
+}
+
+body.darkMode h1 {
+    color: red;
+}
 
 /* PUT THE REST OF THE MOBILE BASELINE LAYOUT HERE */
 
