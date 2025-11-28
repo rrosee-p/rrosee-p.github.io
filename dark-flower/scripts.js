@@ -1,21 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
+// set up DOM loading event listener 
+document.addEventListener("DOMContentLoaded", function () {
 
-    const btn = document.getElementById("darkModeToggle");
-    const body = document.body;
+    // find the dark mode button
+    let darkModeButton = document.querySelector("#toggleDarkMode");
 
-    // load saved mode
-    if (localStorage.getItem("dark-mode") === "enabled") {
-        body.classList.add("dark-mode");
-    }
-
-    btn.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("dark-mode", "enabled");
-        } else {
-            localStorage.setItem("dark-mode", "disabled");
-        }
+    // add a click function and handler
+    darkModeButton.addEventListener("click", function (e) {
+        
+        // when clicked, add class to the body called "darkMode"
+        document.body.classList.toggle("darkMode");
+        
     });
 
 });
+
