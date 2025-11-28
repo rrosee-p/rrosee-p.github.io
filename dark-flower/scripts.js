@@ -1,15 +1,20 @@
-// set up DOM loading event listener 
-document.addEventListener("DOMContentLoaded", function () {
+// DARK MODE TOGGLE SCRIPT FROM DEMO
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("darkModeToggle");
+    const body = document.body;
 
-    // find the dark mode button
-    let darkModeButton = document.querySelector("#toggleDarkMode");
+    // Load saved mode from localStorage
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        body.classList.add("dark-mode");
+    }
 
-    // add a click function and handler
-    darkModeButton.addEventListener("click", function (e) {
-        
-        // when clicked, add class to the body called "darkMode"
-        document.body.classList.toggle("darkMode");
-        
+    toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+        } else {
+            localStorage.setItem("dark-mode", "disabled");
+        }
     });
-
 });

@@ -1,43 +1,54 @@
-* {
-    box-sizing: border-box;
-    /* use border-box model on everything */
+/* ⭐ BEGIN: COPY YOUR ORIGINAL CSS HERE ⭐ */
+
+
+
+/* ⭐ END ORIGINAL CSS ⭐ */
+
+
+/* ---- DARK MODE BUTTON STYLE ---- */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    z-index: 9999;
 }
 
-#demo {
-    display: flex;
-    flex-direction: row;
-    /* or column, row-reverse, column-reverse */
-    flex-wrap: wrap;
+#darkModeToggle:hover {
+    background: #555;
 }
 
-#demo h1 {
-    flex-basis: 100%;
-    order: -1;
+
+/* ---- DARK MODE THEME ---- */
+body.dark-mode {
+    background-color: #111;
+    color: #eee;
 }
 
-#demo p {
-    flex-basis: 20%;
-    padding-right: 1em;
-    margin-top: 0;
+body.dark-mode header,
+body.dark-mode main,
+body.dark-mode section,
+body.dark-mode footer {
+    background-color: #222;
+    color: #eee;
 }
 
-#para1 {
-    order: 0;
+/* If you have cards or boxes */
+body.dark-mode .card {
+    background-color: #1a1a1a;
+    border-color: #444;
 }
 
-#para2 {
-    order: 0;
+/* If you used images with backgrounds */
+body.dark-mode img {
+    filter: brightness(0.9) contrast(1.1);
 }
 
-#toggleDarkMode {
-    margin-top: 2em;
-}
 
-body.darkMode {
-    background-color: darkgrey;
-    color: white;
-}
-
-body.darkMode h1 {
-    color: red;
-}
+/* Responsive rules remain the same — only add dark-mode variants if needed */
