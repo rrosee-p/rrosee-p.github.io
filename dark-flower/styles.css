@@ -1,7 +1,7 @@
 /*mobile-first design for Pacific Rhododendron layout */
 
 *{
-    box-sizing: border-box
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
@@ -19,7 +19,7 @@ header {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-image: url("Pacific\ Rhododendron\ 1\ -\ Walter\ Siegmund.jpeg");
+    background-image: url("Pacific Rhododendron 1 - Walter Siegmund.jpeg");
     background-size: cover;
     background-position: center center;
 }
@@ -36,9 +36,44 @@ header {
     left: 1em;
     color: white;
     font-size: 2.5em;
-    width: calc(100vw-2em);
+    width: calc(100vw - 2em);
 }
 
+/* ----------------------------- */
+/* ★ DARK MODE BUTTON — ADDED ★ */
+/* ----------------------------- */
+
+#toggleDarkMode {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+/* ----------------------------- */
+/* ★ DARK MODE STYLES — ADDED ★ */
+/* ----------------------------- */
+
+.darkMode body,
+.darkMode main,
+.darkMode section {
+    background-color: #111;
+    color: #eee;
+}
+
+.darkMode #rhodiePicture {
+    filter: brightness(0.4);
+}
+
+.darkMode #rhodieTitle h1 {
+    color: #ffecec;
+}
 
 /* PUT THE REST OF THE MOBILE BASELINE LAYOUT HERE */
 
@@ -61,3 +96,4 @@ header {
     /* REST OF THE DESKTOP LAYOUT HERE */
 
 }
+
