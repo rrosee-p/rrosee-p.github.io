@@ -1,11 +1,13 @@
-/* Optional JavaScript File
-   Add interactive features here if needed.
-   Currently empty because your website doesn't require JS yet.
-*/
+let slideIndex = 0;
+showSlides();
 
-// Example: Mobile menu toggle (if you add one later)
-// document.querySelector('.menu-btn').addEventListener('click', () => {
-//   document.querySelector('nav').classList.toggle('open');
-// });
-
-
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
