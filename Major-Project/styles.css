@@ -157,3 +157,23 @@ body {
 }
 
 /* SLIDESHOW SCRIPT (fade effect handled in JS) */
+/* SLIDESHOW FADE EFFECT */
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+.slideshow-container {
+  position: relative;
+  max-width: 900px;
+  height: 500px; /* Set a fixed height for smooth transitions */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
