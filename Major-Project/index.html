@@ -6,8 +6,11 @@
 <title>Home</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <nav>
+
+  <!-- Navigation -->
+  <nav class="navbar">
     <a href="home.html">Home</a>
     <a href="about.html">About Me</a>
     <a href="booking.html">How to Book</a>
@@ -16,16 +19,41 @@
     <a href="connect.html">Let's Connect</a>
   </nav>
 
-  <section id="home">
-    <h1>Welcome to My Photography Portfolio</h1>
-    <div class="portfolio-highlight">
-      <h2>Featured Work</h2>
-      <p>A curated selection of my favorite recent shots to give you a feel for my style.</p>
+  <!-- Fullscreen Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Capturing Moments that Matter</h1>
+      <p>Timeless, creative, and authentic photography.</p>
+      <a href="booking.html" class="btn">Book a Session</a>
     </div>
-    <h2>Mission</h2>
-    <p>To capture your most meaningful moments with creativity and care.</p>
-    <h2>Vision</h2>
-    <p>To create timeless images that tell your unique story.</p>
+  </header>
+
+  <!-- Portfolio Grid -->
+  <section class="portfolio-section">
+    <h2 class="section-title">Featured Work</h2>
+
+    <div class="photo-grid">
+      <div class="grid-item"><img src="img1.jpg" alt="Featured Photo"></div>
+      <div class="grid-item"><img src="img2.jpg" alt="Featured Photo"></div>
+      <div class="grid-item"><img src="img3.jpg" alt="Featured Photo"></div>
+      <div class="grid-item"><img src="img4.jpg" alt="Featured Photo"></div>
+      <div class="grid-item"><img src="img5.jpg" alt="Featured Photo"></div>
+      <div class="grid-item"><img src="img6.jpg" alt="Featured Photo"></div>
+    </div>
   </section>
+
+  <!-- Mission / Vision Section -->
+  <section class="mission-vision">
+    <div>
+      <h2>Mission</h2>
+      <p>To capture your most meaningful moments with creativity and care.</p>
+    </div>
+    <div>
+      <h2>Vision</h2>
+      <p>To create timeless images that tell your unique story.</p>
+    </div>
+  </section>
+
 </body>
 </html>
+
