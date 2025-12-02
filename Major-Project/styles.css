@@ -10,7 +10,7 @@ body {
 .navbar {
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  background-color: #f1afd0;
   padding: 15px 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
