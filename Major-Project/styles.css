@@ -488,14 +488,6 @@ body {
   height: 28px;
 }
 
-/* Optional preview box (you can add photos here later) */
-.social-preview {
-  margin-top: 20px;
-  height: 200px;
-  border-radius: 15px;
-  background: linear-gradient(to bottom right, #ffe0ff, #f9d8ff);
-}
-
 /* Subpage Header */
 .subpage-header {
   background: #f8f8f8;
