@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* NAVIGATION BAR (unchanged) */
+/* NAVIGATION BAR */
 .navbar {
   display: flex;
   justify-content: center;
@@ -112,7 +112,7 @@ body {
 .connect {
   padding: 80px 20px;
   text-align: center;
-  background-color: #fefefe;
+  background-color: #dfcbbb;
 }
 
 .connect h2 {
