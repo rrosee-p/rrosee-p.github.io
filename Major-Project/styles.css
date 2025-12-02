@@ -469,3 +469,62 @@ body {
   border-radius: 15px;
   background: linear-gradient(to bottom right, #ffe0ff, #f9d8ff);
 }
+
+/* Subpage Header */
+.subpage-header {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.subpage-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.subpage-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Connect Page Layout */
+.connect-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+  display: grid;
+  gap: 30px;
+}
+
+.connect-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.connect-box h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-note {
+  margin: 20px 0;
+  color: #333;
+}
+
+/* Button styling (shared site-wide) */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff4f70;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e33f5f;
+}
