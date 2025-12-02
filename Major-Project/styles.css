@@ -528,3 +528,40 @@ body {
 .btn:hover {
   background: #e33f5f;
 }
+
+/* GALLERY GRID */
+.gallery-grid {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.gallery-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.gallery-card img {
+  width: 100%;
+  display: block;
+  height: 250px;
+  object-fit: cover;
+}
+
+.gallery-card h3 {
+  padding: 15px;
+  font-size: 1.3rem;
+  color: #444;
+}
