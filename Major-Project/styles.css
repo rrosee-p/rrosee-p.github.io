@@ -204,3 +204,75 @@ body {
   line-height: 1.7;
   margin-bottom: 20px;
 }
+
+/* SUB HERO (for pages without a full hero image) */
+.sub-hero {
+  background: linear-gradient(to bottom right, #f9d7ff, #ffe8f3);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.sub-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.sub-hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* BOOKING STEPS */
+.steps-section {
+  padding: 70px 20px;
+  background-color: #ffffff;
+}
+
+.steps-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.step-box {
+  background: #fdf7ff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.step-box:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: #d08bff;
+  color: white;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.step-box h3 {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.step-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
